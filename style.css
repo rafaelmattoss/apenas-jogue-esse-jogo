@@ -3,9 +3,12 @@
 /* Estilo para o corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
+    background-color:  #ffeb3b;
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+
 }
 
 /* Estilo para as cartas de intimidade */
@@ -20,7 +23,7 @@ body {
 }
 
 /* Estilo para o texto dentro das cartas */
-#intimidade div {
+.cartaint {
     height: 400px;
     width: 300px;
     margin: auto;
@@ -37,10 +40,11 @@ body {
     border: 3px solid #2c2c2c; /* Borda cinza */
     font-size: 20px;
     
+    
 
 }
 
-#conhecer div{
+.cartacon{
     height: 400px;
     width: 300px;
     margin: auto;
@@ -131,6 +135,8 @@ h1 {
 #dado:hover::after {
     background-color: #666; /* cor do ponto ao passar o mouse */
 }
+
+
 
 
 
