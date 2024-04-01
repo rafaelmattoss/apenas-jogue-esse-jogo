@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para as cartas de intimidade */
+
+
+/* Estilo para as cartas de conhecer */
+#conhecer {
+    
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o texto dentro das cartas */
+#intimidade div {
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #f06c00;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #2c2c2c; /* Borda cinza */
+    font-size: 20px;
+    
+
+}
+
+#conhecer div{
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #2dfd26;
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #2c2c2c; /* Borda cinza */
+
+}
+
+
+/* Estilo para o título da página */
+h1 {
+    text-align: center;
+    color: #333; /* Cor do título cinza escuro */
+}
+
+/* Estilo para o conteúdo geral */
+#cartasint,
+#cartascon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+/* Adiciona sombra às divs dentro de #cartasint e #cartascon */
+#conhecer div,
+#intimidade div {
+    box-shadow: 20px 10px 20px rgb(0, 0, 0); 
+}
+
+
+/* Estilo para a div principal */
+#cartasint {
+    background-color: #ffeb3b; /* Amarelo claro */
+}
+
+#dado {
+    width: 100px; /* largura do botão */
+    height: 100px; /* altura do botão */
+    background-color: #fff; /* cor de fundo */
+    border: 2px solid #000; /* borda preta */
+    border-radius: 10px; /* bordas arredondadas */
+    font-size: 1.5em; /* tamanho da fonte */
+    font-weight: bold; /* negrito */
+    display: flex; /* exibe como um flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    cursor: pointer; /* cursor ao passar o mouse */
+    position: relative; /* define a posição relativa */
+    overflow: hidden; /* esconde qualquer conteúdo que ultrapasse */
+}
+
+#dado::before {
+    content: ""; /* conteúdo vazio */
+    position: absolute; /* posição absoluta */
+    width: 30px; /* largura */
+    height: 30px; /* altura */
+    background-color: #ff0000; /* cor do ponto */
+    border-radius: 50%; /* borda circular */
+    top: -15px; /* posição superior */
+    left: -15px; /* posição esquerda */
+}
+
+#dado::after {
+    content: ""; /* conteúdo vazio */
+    position: absolute; /* posição absoluta */
+    width: 30px; /* largura */
+    height: 30px; /* altura */
+    background-color: #000264; /* cor do ponto */
+    border-radius: 50%; /* borda circular */
+    bottom: -15px; /* posição inferior */
+    right: -15px; /* posição direita */
+}
+
+#dado:hover::before,
+#dado:hover::after {
+    background-color: #666; /* cor do ponto ao passar o mouse */
+}
+
+
+
+
+
+
+
+
