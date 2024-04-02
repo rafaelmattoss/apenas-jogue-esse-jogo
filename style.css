@@ -107,37 +107,36 @@ h1 {
 }
 
 
-/* Estilo para a div principal */
+
 #cartasint {
-    background-color: #ffeb3b; /* Amarelo claro */
+    background-color: #ffeb3b; 
 }
 
 #dado {
-    width: 100px; /* largura do botão */
-    height: 100px; /* altura do botão */
-    background-color: #fff; /* cor de fundo */
-    border: 2px solid #000; /* borda preta */
-    border-radius: 10px; /* bordas arredondadas */
-    font-size: 1.5em; /* tamanho da fonte */
-    font-weight: bold; /* negrito */
-    display: flex; /* exibe como um flexbox */
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center; /* centraliza verticalmente */
-    cursor: pointer; /* cursor ao passar o mouse */
-    position: relative; /* define a posição relativa */
-    overflow: hidden; /* esconde qualquer conteúdo que ultrapasse */
+    width: 100px; 
+    height: 100px; 
+    background-color: #fff; 
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 #dado::before {
-    content: ""; /* conteúdo vazio */
-    position: absolute; /* posição absoluta */
-    width: 30px; /* largura */
-    height: 30px; /* altura */
-    background-color: #ff0000; /* cor do ponto */
-    border-radius: 50%; /* borda circular */
-    top: -15px; /* posição superior */
-    left: -15px; /* posição esquerda */
-}
+    content: ""; 
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    background-color: #ff0000; 
+    border-radius: 50%; 
+    top: -15px; 
+    left: -15px; }
 
 #dado::after {
     content: ""; 
@@ -148,6 +147,8 @@ h1 {
     border-radius: 50%; 
     right: -20px; 
 }
+
+
 
 
 @keyframes spin {

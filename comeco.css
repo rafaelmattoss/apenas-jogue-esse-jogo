@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: coral;
+}
+#regras{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    background-color: antiquewhite;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px ;
+    margin-bottom: 80px;
+}
+
+#manual{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    background-color: antiquewhite;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px ;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona algum espaço ao redor do cabeçalho */
+}
+
+#opcoes{
+    display: flex;
+    gap: 50px;
+
+}
+
+.escolha{
+    background-color: rgb(251, 255, 27);
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+
+}
+
+#options {
+    display: flex;
+    justify-content: center; /* Centraliza os elementos filhos horizontalmente */
+}
+
+#options > div {
+    margin: 0 10px; /* Adiciona algum espaço entre os elementos */
+    cursor: pointer; /* Altera o cursor para indicar que os elementos são clicáveis */
+}
+
+#jogo{
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 100px;
+    padding: 10px;
+    background-color: gold;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+    border-radius: 20px;
+}
