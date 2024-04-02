@@ -8,7 +8,7 @@ body{
 #regras{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 80%;
-    height: 800px;
+    height: 100%;
     margin: auto;
     background-color: antiquewhite;
     padding: 20px;
@@ -20,7 +20,7 @@ body{
 #manual{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 80%;
-    height: 500px;
+    height: 100%;
     margin: auto;
     background-color: antiquewhite;
     padding: 20px;
