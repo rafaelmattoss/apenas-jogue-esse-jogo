@@ -42,6 +42,27 @@ body {
 
 }
 
+.desafio{
+
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    background: linear-gradient(to bottom, rgb(255, 0, 0),rgb(247, 135, 8), rgb(226, 123, 247));
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #2c2c2c; /* Borda cinza */
+    font-size: 20px;
+
+
+}
+
 .cartacon{
     height: 400px;
     width: 300px;
