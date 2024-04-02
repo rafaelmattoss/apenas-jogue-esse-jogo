@@ -39,8 +39,6 @@ body {
     justify-content: center;
     border: 3px solid #2c2c2c; /* Borda cinza */
     font-size: 20px;
-    
-    
 
 }
 
@@ -121,20 +119,28 @@ h1 {
 }
 
 #dado::after {
-    content: ""; /* conteúdo vazio */
-    position: absolute; /* posição absoluta */
-    width: 30px; /* largura */
-    height: 30px; /* altura */
-    background-color: #000264; /* cor do ponto */
-    border-radius: 50%; /* borda circular */
-    bottom: -15px; /* posição inferior */
-    right: -15px; /* posição direita */
+    content: ""; 
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    background-color: #000264; 
+    border-radius: 50%; 
+    right: -15px; 
 }
 
-#dado:hover::before,
-#dado:hover::after {
-    background-color: #666; /* cor do ponto ao passar o mouse */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
+#dado.spin-animation {
+    animation: spin 1s linear infinite; 
+}
+
+
+
+
 
 
 
