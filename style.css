@@ -59,9 +59,9 @@ body {
     justify-content: center;
     border: 3px solid #2c2c2c; /* Borda cinza */
     font-size: 20px;
-
-
+    animation: pulse 2s infinite;
 }
+
 
 .cartacon{
     height: 400px;
@@ -159,6 +159,14 @@ h1 {
 #dado.spin-animation {
     animation: spin 1s linear infinite; 
 }
+
+@keyframes pulse {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(0.9); }
+}
+
+
 
 
 
