@@ -20,7 +20,7 @@ $(document).ready(function() {
         var randomPercent = Math.floor(Math.random() * 100);
 
         // Verifica se o número está dentro dos 10% desejados para exibir um desafio
-        if (randomPercent < 2) {
+        if (randomPercent < 3) {
             var randomDesafio = Math.floor(Math.random() * $('.desafio').length);
             $('.desafio').eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
         } else {
