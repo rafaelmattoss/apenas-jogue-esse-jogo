@@ -3,11 +3,14 @@
 /* Estilo para o corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color:  #ffeb3b;
     margin: 0%;
     padding: 0%;
     height: 100%;
     width: 100%;
+    background-image: url('316dd73e47443990d0a853ce705af602.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho correto da sua imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
 
 }
 
@@ -108,9 +111,7 @@ h1 {
 
 
 
-#cartasint {
-    background-color: #ffeb3b; 
-}
+
 
 #dado {
     width: 100px; 
