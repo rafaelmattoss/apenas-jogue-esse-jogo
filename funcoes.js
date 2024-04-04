@@ -52,3 +52,6 @@ $(document).ready(function() {
         return indexes[Math.floor(Math.random() * indexes.length)];
     }
 });
+
+
+

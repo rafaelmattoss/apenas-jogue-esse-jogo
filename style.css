@@ -3,10 +3,10 @@
 /* Estilo para o corpo da página */
 body {
     font-family: Arial, sans-serif;
-    margin: 0%;
-    padding: 0%;
-    height: 100%;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100vw; /* 100% da largura da viewport */
     background-image: url('316dd73e47443990d0a853ce705af602.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho correto da sua imagem */
     background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
     background-position: center; /* Centraliza a imagem */
@@ -14,10 +14,11 @@ body {
 
 }
 
-/* Estilo para as cartas de intimidade */
 
 
-/* Estilo para as cartas de conhecer */
+
+
+
 #conhecer {
     
     border-radius: 10px;
