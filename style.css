@@ -150,6 +150,49 @@ h1 {
     right: -20px; 
 }
 
+.cartarel{
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #fa0606;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #2c2c2c; /* Borda cinza */
+    font-size: 20px;
+}
+
+#relacon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+#relacon:hover{
+    cursor: pointer;
+
+}
+
+.novo-papel-de-parede {
+    background-image: url('7a2b218ae5a00d6011425a91e43ac9f0.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+
+  
+ 
+  
+
 
 
 

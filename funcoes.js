@@ -2,7 +2,8 @@ $(document).ready(function() {
     
     $('.cartaint').hide();
     $('.cartacon').hide();
-    $('.desafio').hide(); // Oculta os desafios inicialmente
+    $('.desafio').hide(); 
+    $('.cartarel').hide(); 
     
     var divsExibidas = []; // Array para armazenar os índices das divs já exibidas
     
@@ -17,6 +18,7 @@ $(document).ready(function() {
         $('.cartaint').hide();
         $('.cartacon').hide();
         $('.desafio').hide(); // Oculta todos os desafios ao clicar no botão
+        $('.cartarel').hide(); // Oculta todas as divs cartarel
 
         // Gera um número aleatório entre 0 e 99
         var randomPercent = Math.floor(Math.random() * 100);
@@ -53,5 +55,26 @@ $(document).ready(function() {
     }
 });
 
+$('#relacon').click(function() {
+    $('body').addClass('novo-papel-de-parede');
+    $('.cartaint').hide();
+    $('.cartacon').hide();
+    $('.desafio').hide(); 
 
+    $('#dado').click(function() {
+        $('.cartaint').hide();
+        $('.cartacon').hide();
+        $('.desafio').hide(); 
 
+        var divsExibidas = []; // Array para armazenar os índices das divs já exibidas
+
+        // Oculta todas as divs cartarel
+        $('.cartarel').hide();
+
+        // Gera um número aleatório entre 0 e o número total de divs com a classe cartarel
+        var randomIndex = Math.floor(Math.random() * $('.cartarel').length);
+        
+        // Exibe a div com o índice aleatório escolhido
+        $('.cartarel').eq(randomIndex).fadeIn(1000); 
+    });
+});
