@@ -181,20 +181,22 @@ h1 {
 
 }
 
-.novo-papel-de-parede {
-    background-image: url('7a2b218ae5a00d6011425a91e43ac9f0.jpg');
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra todo o elemento */
+    z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+    display: none; /* Inicialmente oculta o vídeo */
 }
+
 
 
   
  
   
-
-
-
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
