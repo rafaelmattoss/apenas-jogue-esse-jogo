@@ -168,6 +168,18 @@ h1 {
     font-size: 20px;
 }
 
+#normal{
+    margin-top: 30px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#normal:hover{
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
 #relacon {
     display: flex;
     justify-content: center;
