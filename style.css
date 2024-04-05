@@ -15,10 +15,6 @@ body {
 }
 
 
-
-
-
-
 #conhecer {
     
     border-radius: 10px;
@@ -101,6 +97,7 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin-bottom: -40px;
     
 }
 
@@ -109,8 +106,6 @@ h1 {
 #intimidade div {
     box-shadow: 20px 10px 20px rgb(0, 0, 0); 
 }
-
-
 
 
 
