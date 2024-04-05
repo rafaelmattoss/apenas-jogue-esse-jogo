@@ -35,6 +35,7 @@ $(document).ready(function() {
 
     // Comportamento ao clicar no botão relacon
     $('#relacon').click(function() {
+        $('.cartaint, .cartacon, .desafio, .cartarel').hide();
         $('#normal').show();
         $('#relacon').hide();
         $('#video-background').fadeIn();
@@ -54,6 +55,7 @@ $(document).ready(function() {
 
     // Comportamento ao clicar no botão normal
     $('#normal').click(function() {
+        $('.cartaint, .cartacon, .desafio, .cartarel').hide();
         $('#relacon').show();
         $('#normal').hide();
         $('#video-background').hide();
