@@ -1,82 +1,105 @@
 $(document).ready(function() {
-    $('#normal').hide();
-    $('.cartaint').hide();
-    $('.cartacon').hide();
-    $('.desafio').hide(); 
-    $('.cartarel').hide(); 
-    
-    var divsExibidas = []; // Array para armazenar os índices das divs já exibidas
-    
-    $('#dado').click(function() {
-        
-        $('#dado').addClass('spin-animation');
+    // Oculta todas as cartas no início
+    $("#normal").hide();
+    $('.cartaint, .cartacon, .desafio, .cartarel').hide();
 
-        setTimeout(function(){
-            $('#dado').removeClass('spin-animation');
+    // Manipulação do clique no dado
+    $('#dado').click(function() {
+        // Adiciona a classe de animação ao dado
+        $(this).addClass('spin-animation');
+
+        // Remove a classe de animação após 1 segundo (1000 milissegundos)
+        setTimeout(() => {
+            $(this).removeClass('spin-animation');
         }, 1000);
 
-        $('.cartaint').hide();
-        $('.cartacon').hide();
-        $('.desafio').hide(); // Oculta todos os desafios ao clicar no botão
-        $('.cartarel').hide(); // Oculta todas as divs cartarel
+        // Oculta todas as cartas ao clicar no dado
+        $('.cartaint, .cartacon, .desafio, .cartarel').hide();
 
         // Gera um número aleatório entre 0 e 99
         var randomPercent = Math.floor(Math.random() * 100);
 
-        // Verifica se o número está dentro dos 10% desejados para exibir um desafio
+        // Verifica se o número está dentro dos 3% desejados para exibir um desafio
         if (randomPercent < 3) {
-            var randomDesafio = getRandomIndex('.desafio', divsExibidas);
-            $('.desafio').eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
-            divsExibidas.push(randomDesafio);
+            var $desafios = $('.desafio:not(:visible)');
+            if ($desafios.length > 0) {
+                var randomDesafio = Math.floor(Math.random() * $desafios.length);
+                $desafios.eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
+            }
         } else {
-            var randomIntimidade = getRandomIndex('.cartaint', divsExibidas);
-            var randomConhecer = getRandomIndex('.cartacon', divsExibidas);
-            var randomType = Math.random();
-            
-            if (randomType < 0.5) {
-                $('.cartaint').eq(randomIntimidade).fadeIn(1000); 
-                divsExibidas.push(randomIntimidade);
-            } else {
-                $('.cartacon').eq(randomConhecer).fadeIn(1000); 
-                divsExibidas.push(randomConhecer);
+            var $cartas = $('.cartaint, .cartacon:not(:visible)');
+            if ($cartas.length > 0) {
+                var randomCarta = Math.floor(Math.random() * $cartas.length);
+                $cartas.eq(randomCarta).fadeIn(1000); // Exibe uma carta aleatória
             }
         }
     });
 
-    // Função para obter um índice aleatório não exibido
-    function getRandomIndex(selector, displayedIndexes) {
-        var indexes = [];
-        $(selector).each(function(index) {
-            if (!displayedIndexes.includes(index)) {
-                indexes.push(index);
+    // Manipulação do clique no botão relacon
+    $('#relacon').click(function() {
+        $("body").addClass("novo-papel-de-parede")
+        $("#normal").show();
+        $('#relacon').hide();
+
+        // Oculta todas as cartas ao clicar no botão
+        $('.cartaint, .cartacon, .desafio, .cartarel').hide();
+
+        $("#dado").click(()=>{
+
+            $('.cartaint, .cartacon, .desafio, .cartarel').hide();
+
+            // Exibe uma carta "relacon" aleatória
+            var $cartasRelacion = $('.cartarel:not(:visible)');
+            if ($cartasRelacion.length > 0) {
+                var randomRelacion = Math.floor(Math.random() * $cartasRelacion.length);
+                $cartasRelacion.eq(randomRelacion).fadeIn(1000);
             }
-        });
-        return indexes[Math.floor(Math.random() * indexes.length)];
-    }
-});
+        })
 
-$('#relacon').click(function() {
-    $('body').addClass('novo-papel-de-parede');
-    $('#normal').show();
-    $('#relacon').hide();
-    $('.cartaint').hide();
-    $('.cartacon').hide();
-    $('.desafio').hide(); 
 
-    $('#dado').click(function() {
-        $('.cartaint').hide();
-        $('.cartacon').hide();
-        $('.desafio').hide(); 
-
-        var divsExibidas = []; // Array para armazenar os índices das divs já exibidas
-
-        // Oculta todas as divs cartarel
-        $('.cartarel').hide();
-
-        // Gera um número aleatório entre 0 e o número total de divs com a classe cartarel
-        var randomIndex = Math.floor(Math.random() * $('.cartarel').length);
-        
-        // Exibe a div com o índice aleatório escolhido
-        $('.cartarel').eq(randomIndex).fadeIn(1000); 
+       
     });
 });
+
+
+
+$("#normal").click(()=>{
+    $("body").removeClass("novo-papel-de-parede")
+    $('#relacon').show();
+    $("#normal").hide();
+    $('.cartaint, .cartacon, .desafio, .cartarel').hide();
+
+    // Manipulação do clique no dado
+    $('#dado').click(function() {
+        // Adiciona a classe de animação ao dado
+        $(this).addClass('spin-animation');
+
+        // Remove a classe de animação após 1 segundo (1000 milissegundos)
+        setTimeout(() => {
+            $(this).removeClass('spin-animation');
+        }, 1000);
+
+        // Oculta todas as cartas ao clicar no dado
+        $('.cartaint, .cartacon, .desafio, .cartarel').hide();
+
+        // Gera um número aleatório entre 0 e 99
+        var randomPercent = Math.floor(Math.random() * 100);
+
+        // Verifica se o número está dentro dos 3% desejados para exibir um desafio
+        if (randomPercent < 3) {
+            var $desafios = $('.desafio:not(:visible)');
+            if ($desafios.length > 0) {
+                var randomDesafio = Math.floor(Math.random() * $desafios.length);
+                $desafios.eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
+            }
+        } else {
+            var $cartas = $('.cartaint, .cartacon:not(:visible)');
+            if ($cartas.length > 0) {
+                var randomCarta = Math.floor(Math.random() * $cartas.length);
+                $cartas.eq(randomCarta).fadeIn(1000); // Exibe uma carta aleatória
+            }
+        }
+    });
+});
+
+    
