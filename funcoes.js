@@ -1,14 +1,13 @@
 $(document).ready(function() {
+    // Esconde elementos ao carregar a página
     $("#normal").hide();
     $('.cartaint, .cartacon, .desafio, .cartarel').hide();
-    $('#video-background').hide(); // Oculta o vídeo de fundo inicialmente
+    $('#video-background').hide();
 
-    // Define o comportamento padrão do dado ao clicar
+    // Comportamento padrão ao clicar no dado
     $('#dado').click(function() {
-        // Adiciona a classe de animação ao dado
-        $(this).addClass('spin-animation');
+        $(this).addClass('spin-animation'); // Adiciona animação ao dado
 
-        // Remove a classe de animação após 1 segundo (1000 milissegundos)
         setTimeout(() => {
             $(this).removeClass('spin-animation');
         }, 1000);
@@ -16,84 +15,69 @@ $(document).ready(function() {
         // Oculta todas as cartas ao clicar no dado
         $('.cartaint, .cartacon, .desafio, .cartarel').hide();
 
-        // Gera um número aleatório entre 0 e 99
+        // Gera número aleatório entre 0 e 99
         var randomPercent = Math.floor(Math.random() * 100);
 
-        // Verifica se o número está dentro dos 3% desejados para exibir um desafio
         if (randomPercent < 3) {
             var $desafios = $('.desafio:not(:visible)');
             if ($desafios.length > 0) {
                 var randomDesafio = Math.floor(Math.random() * $desafios.length);
-                $desafios.eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
+                $desafios.eq(randomDesafio).fadeIn(1000);
             }
         } else {
             var $cartas = $('.cartaint, .cartacon:not(:visible)');
             if ($cartas.length > 0) {
                 var randomCarta = Math.floor(Math.random() * $cartas.length);
-                $cartas.eq(randomCarta).fadeIn(1000); // Exibe uma carta aleatória
+                $cartas.eq(randomCarta).fadeIn(1000);
             }
         }
     });
 
-    // Manipulação do clique no botão relacon
+    // Comportamento ao clicar no botão relacon
     $('#relacon').click(function() {
-        $('#normal').show(); // Mostra o botão #normal
-        $('#relacon').hide(); // Oculta o botão #relacon
+        $('#normal').show();
+        $('#relacon').hide();
+        $('#video-background').fadeIn();
+        $('body').css('background-image', 'none');
 
-        $('#video-background').fadeIn(); // Exibe o vídeo de fundo
-        $('body').css('background-image', 'none'); // Remove a imagem de fundo
-
-        // Define o comportamento do dado para exibir cartas "relacon"
-        $('#dado').off('click').on('click', function() {
+        // Define comportamento do dado para cartas "relacon"
+        $('#dado').click(()=>{
             $('.cartaint, .cartacon, .desafio, .cartarel').hide();
 
-            // Exibe uma carta "relacon" aleatória
             var $cartasRelacion = $('.cartarel:not(:visible)');
             if ($cartasRelacion.length > 0) {
                 var randomRelacion = Math.floor(Math.random() * $cartasRelacion.length);
                 $cartasRelacion.eq(randomRelacion).fadeIn(1000);
             }
-        });
+        })
     });
 
-    // Manipulação do clique no botão normal
+    // Comportamento ao clicar no botão normal
     $('#normal').click(function() {
-        $('#relacon').show(); // Mostra o botão #relacon
-        $('#normal').hide(); // Oculta o botão #normal
+        $('#relacon').show();
+        $('#normal').hide();
+        $('#video-background').hide();
+        $('body').css('background-image', 'url("316dd73e47443990d0a853ce705af602.jpg")');
 
-        $('#video-background').hide(); // Oculta o vídeo de fundo
-        $('body').css('background-image', 'url("316dd73e47443990d0a853ce705af602.jpg")'); // Restaura a imagem de fundo
-
-        // Define o comportamento do dado para exibir cartas normais
-        $('#dado').off('click').on('click', function() {
-            // Adiciona a classe de animação ao dado
-            $(this).addClass('spin-animation');
-
-            // Remove a classe de animação após 1 segundo (1000 milissegundos)
-            setTimeout(() => {
-                $(this).removeClass('spin-animation');
-            }, 1000);
-
-            // Oculta todas as cartas ao clicar no dado
+        // Define comportamento do dado para cartas normais
+        $('#dado').click(()=>{
             $('.cartaint, .cartacon, .desafio, .cartarel').hide();
 
-            // Gera um número aleatório entre 0 e 99
             var randomPercent = Math.floor(Math.random() * 100);
 
-            // Verifica se o número está dentro dos 3% desejados para exibir um desafio
             if (randomPercent < 3) {
                 var $desafios = $('.desafio:not(:visible)');
                 if ($desafios.length > 0) {
                     var randomDesafio = Math.floor(Math.random() * $desafios.length);
-                    $desafios.eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
+                    $desafios.eq(randomDesafio).fadeIn(1000);
                 }
             } else {
                 var $cartas = $('.cartaint, .cartacon:not(:visible)');
                 if ($cartas.length > 0) {
                     var randomCarta = Math.floor(Math.random() * $cartas.length);
-                    $cartas.eq(randomCarta).fadeIn(1000); // Exibe uma carta aleatória
+                    $cartas.eq(randomCarta).fadeIn(1000);
                 }
             }
-        });
+        })
     });
 });

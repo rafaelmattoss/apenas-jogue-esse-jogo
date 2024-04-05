@@ -216,7 +216,7 @@ h1 {
 }
 
 #dado.spin-animation {
-    animation: spin 1s linear infinite; 
+    animation: spin 1s linear ; 
 }
 
 @keyframes pulse {
