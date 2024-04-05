@@ -189,28 +189,12 @@ h1 {
 
 }
 
-#video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra todo o elemento */
-    z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
-    display: none; /* Inicialmente oculta o vídeo */
+.novo-papel-de-parede {
+    background-image: url('papelamor.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    /* Adicione outras propriedades de estilo conforme necessário */
 }
-
-#video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
-}
-
-
 
 
 

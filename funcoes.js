@@ -38,8 +38,7 @@ $(document).ready(function() {
         $('.cartaint, .cartacon, .desafio, .cartarel').hide();
         $('#normal').show();
         $('#relacon').hide();
-        $('#video-background').fadeIn();
-        $('body').css('background-image', 'none');
+        $('body').addClass('novo-papel-de-parede');
 
         // Define comportamento do dado para cartas "relacon"
         $('#dado').click(()=>{
