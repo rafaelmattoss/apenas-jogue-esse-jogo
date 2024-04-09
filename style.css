@@ -25,7 +25,7 @@ body {
 /* Estilo para o texto dentro das cartas */
 .cartaint {
     height: 400px;
-    width: 300px;
+    width: 250px;
     margin: auto;
     margin-bottom: 30px;
     background-color: #ff933b;
@@ -39,6 +39,7 @@ body {
     justify-content: center;
     border: 3px solid #2c2c2c; /* Borda cinza */
     font-size: 20px;
+    text-align: left;
 
 }
 
@@ -65,7 +66,7 @@ body {
 
 .cartacon{
     height: 400px;
-    width: 300px;
+    width: 250px;
     margin: auto;
     margin-bottom: 30px;
     background-color: #72ff6d;
