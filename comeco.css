@@ -10,7 +10,7 @@ body, html {
 
 /* Container principal */
 .container {
-    max-width: 400px;
+    max-width: 350px;
     margin: 100px auto;
     background-color: #fff;
     padding: 20px;
