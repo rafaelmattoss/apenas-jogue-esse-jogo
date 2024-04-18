@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
     <link rel="stylesheet" href="comeco.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 <body>
@@ -12,11 +13,15 @@
 <div class="container">
     <h2>Apenas jogue esse Jogo</h2>
     <form action="#" id="form-login">
+
+        <div id="erro">todos os campos devem ser preenchidos</div>
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" name="usuario">
+        
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha">
+
 
         <button type="submit" id="entrar">Entrar</button>
     </form>
@@ -25,10 +30,10 @@
     <a href="jogo.html" id="temp">Entrar como modo temporário</a>
     <button id="recover">Esqueci Minha Senha</button>
 
-   
-
 
 </div>
+
+<script src="validacao.js"></script>
 
 </body>
 </html>
