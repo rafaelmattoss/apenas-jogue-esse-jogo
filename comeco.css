@@ -1,89 +1,97 @@
 @charset "UTF-8";
 
-body{
-    margin: 0%;
-    padding: 0%;
-    background-color: coral;
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
-#regras{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    background-color: antiquewhite;
+
+/* Container principal */
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid black;
-    border-radius: 20px ;
-    margin-bottom: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#manual{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    background-color: antiquewhite;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 20px ;
+/* Estilos para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-h1{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    color: white;
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-h2{
-    text-align: center;
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Botão de Entrar */
+#entrar {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
-header {
-    text-align: center; /* Centraliza o conteúdo horizontalmente */
-    padding: 20px; /* Adiciona algum espaço ao redor do cabeçalho */
-}
-
-#opcoes{
-    display: flex;
-    gap: 50px;
+#recover{
+    background-color: cadetblue;
+    color: azure;
+    padding: 2px;
+    border-radius: 10px;
 
 }
 
-.escolha{
-    background-color: rgb(251, 255, 27);
-    padding: 5px;
-    border-radius: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 15px;
-
+#entrar:hover {
+    background-color: #0056b3;
 }
 
-#options {
-    display: flex;
-    justify-content: center; /* Centraliza os elementos filhos horizontalmente */
-}
-
-#options > div {
-    margin: 0 10px; /* Adiciona algum espaço entre os elementos */
-    cursor: pointer; /* Altera o cursor para indicar que os elementos são clicáveis */
-}
-
-#jogo{
+/* Link para Registrar */
+a {
+    padding: 10px 20px;
+    background-color: #ffab0f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
     display: block;
-    margin: auto;
-    height: 30px;
-    width: 100px;
-    padding: 10px;
-    background-color: gold;
-    align-items: center;
     text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: black;
-    font-weight: 400;
-    border-radius: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+
+    
 }
 
+a:hover {
+    background-color: #99670b;
+}
+
+/* Botão de Esqueci Minha Senha */
+button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
