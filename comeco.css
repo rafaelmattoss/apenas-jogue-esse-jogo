@@ -29,7 +29,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
     padding: 10px;
     margin-bottom: 20px;
@@ -110,15 +110,6 @@ button:hover {
     text-decoration: none;
 }
 
-#erro {
-    background-color: red;
-    color: white;
-    padding: 5px; /* Aumentar o padding para mais espaço ao redor do texto */
-    width: 100%; /* Ajustar a largura das mensagens de erro */
-    margin: auto;
-    text-align: center;
-    display: none; /* Centralizar o texto dentro das mensagens de erro */
-}
 
 
 
