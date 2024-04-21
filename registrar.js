@@ -1,9 +1,9 @@
 // Aguarda o carregamento completo do documento HTML
 $(document).ready(function() {
-    // Adiciona um event listener ao botão #registrar
+    
     $("#registrar").click(function() {
-        animaçãoDecarregamento(); // Mostra a animação de carregamento
-        validarRegistro(); // Valida o registro do usuário
+        animaçãoDecarregamento(); 
+        validarRegistro(); 
     });
 });
 
@@ -70,9 +70,9 @@ function registrarUsuario(email, senha) {
         .then((userCredential) => {
             if (userCredential) {
                 const user = userCredential.user;
-                console.log("Usuário registrado:", user);
                 alert("Conta criada com sucesso! Faça login para acessar.");
-                limparCampos(); // Limpa os campos do formulário após o registro bem-sucedido
+                window.location.href = 'index.html';
+                limparCampos(); 
             }
         })
         .catch((error) => {
@@ -81,7 +81,7 @@ function registrarUsuario(email, senha) {
         });
 }
 
-// Função para limpar os campos do formulário após o registro bem-sucedido
+
 function limparCampos() {
     $("#nome").val("");
     $("#emailr").val("");

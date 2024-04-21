@@ -8,3 +8,7 @@ const firebaseConfig = {
     measurementId: "G-NS6Q2916T3"
 };
 firebase.initializeApp(firebaseConfig);
+
+firebase.auth( ).onAuthStateChanged(user => {
+    if (user) {window.location.href = 'jogo.html'}
+});

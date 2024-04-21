@@ -1,12 +1,12 @@
 @charset "UTF-8";
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #fff349;
     padding: 20px;
 }
 form {
     margin: auto;
-    max-width: 400px;
+    max-width: 350px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -45,16 +45,3 @@ button:hover {
     background-color: #0056b3;
 }
 
-#voltar{
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 24px;
-    background-color: rgb(255, 124, 30);
-    color: white;
-    text-decoration: none; /* Remove sublinhado do link */
-    
-}
