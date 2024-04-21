@@ -102,4 +102,7 @@ $("#normal").click(()=>{
     });
 });
 
-    
+$('#config').click(function() {
+    $('#menuconfig').toggle(); // Alterna a visibilidade do menuconfig
+});
+
