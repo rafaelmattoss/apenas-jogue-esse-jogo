@@ -39,7 +39,7 @@ $(document).ready(function() {
     $('#relacon').click(function() {
         $("body").addClass("novo-papel-de-parede")
         $("#normal").show();
-        $('#relacon').hide();
+    
 
         // Oculta todas as cartas ao clicar no botão
         $('.cartaint, .cartacon, .desafio, .cartarel').hide();

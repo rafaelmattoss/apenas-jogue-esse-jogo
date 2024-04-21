@@ -12,33 +12,36 @@ body {
 
 #config{
     color: white;
-    margin-left: 50px;
-    margin-top: 50px;
-    
+    display: block;
+    text-align: center;
 }
 
 #menuconfig{
     background-color: white;
-    max-width: 200px;
-    position: absolute;
-    margin-left: -20px;
     padding: 20px;
     display: none;
-
-
-}
-
-#menuconfig > ul{
-    list-style-type: none;
-    text-align: center;
-}
-
-li{
-    margin-bottom: 50px;
-    border: 1px solid black;
-    margin-left: 0%;
+    border-radius: 20px;
+    width: 300px; /* Largura do menu */
+    margin: 0 auto; /* Centralizar horizontalmente */
     padding: 20px;
-    margin-left: -10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    
+
+}
+
+#menuconfig ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menuconfig li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#menuconfig li:hover {
+    background-color: #e0e0e0;
 }
 
 
@@ -54,7 +57,8 @@ li{
     height: 400px;
     width: 250px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-top: -10px;
+    margin-bottom: 20px;
     background-color: #ff933b;
     padding: 20px;
     border-radius: 20px;
@@ -77,7 +81,7 @@ li{
     height: 400px;
     width: 300px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     background: linear-gradient(to bottom, rgb(255, 0, 0),rgb(247, 135, 8), rgb(226, 123, 247));
     padding: 20px;
     border-radius: 20px;
@@ -97,7 +101,8 @@ li{
     height: 400px;
     width: 250px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-top: -10px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
     color: white;
@@ -155,6 +160,7 @@ h1 {
     cursor: pointer; 
     position: relative; 
     overflow: hidden; 
+    margin-top: -20px;
     
 }
 
@@ -183,6 +189,7 @@ h1 {
     width: 250px;
     margin: auto;
     margin-bottom: 30px;
+    margin-top: -30px;
     background-color: #ff0000;
     padding: 20px;
     border-radius: 20px;
@@ -211,15 +218,13 @@ h1 {
 
 #relacon {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    font-size: 25px;
+    
+    font-size: 18px;
 }
 
 #relacon:hover{
     cursor: pointer;
-    font-size: 30px;
+    background-color: #ff0000;
 
 }
 
