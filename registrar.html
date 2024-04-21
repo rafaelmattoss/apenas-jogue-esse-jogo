@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuário</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="registrar.js"></script>
     <link rel="stylesheet" href="registrar.css">
 </head>
 <body>
@@ -13,22 +17,26 @@
     <input type="text" id="nome" name="nome" placeholder="Informe seu nome completo" required>
 
     <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-
-    <label for="usuario">Nome de Usuário:</label>
-    <input type="text" id="usuario" name="usuario" placeholder="Escolha um nome de usuário" required>
+    <input type="email" id="emailr" name="email" placeholder="Digite seu e-mail" required>
 
     <label for="senha">Senha:</label>
-    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+    <input type="password" id="senhar" name="senha" placeholder="Digite sua senha" required>
 
     <label for="confirmarSenha">Confirmar Senha:</label>
-    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+    <input type="password" id="confirmarSenhar" name="confirmarSenha" placeholder="Confirme sua senha" required>
 
-    <button type="submit">Registrar</button>
+    <button type="button" id="registrar">Registrar</button>
 
     <a href="index.htm" id="voltar"> &#8592; </a>
 
+
 </form>
+
+
+<script src="carregar.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="firebase.js"></script>
 
 </body>
 </html>
