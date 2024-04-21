@@ -5,13 +5,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh; /* 100% da altura da viewport */
-    width: 100vw; /* 100% da largura da viewport */
-    background-image: url('316dd73e47443990d0a853ce705af602.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho correto da sua imagem */
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-
+    height: 100vh; 
+    width: 100vw; 
+    background-color: mediumorchid;
 }
 
 #config{
@@ -24,7 +20,6 @@ body {
 #menuconfig{
     background-color: white;
     max-width: 200px;
-    height: 100vh;
     position: absolute;
     margin-left: -20px;
     padding: 20px;
@@ -101,17 +96,19 @@ li{
     width: 250px;
     margin: auto;
     margin-bottom: 30px;
-    background-color: #72ff6d;
     padding: 20px;
     border-radius: 20px;
-    color: rgb(0, 0, 0);
+    color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 3px solid #2c2c2c; /* Borda cinza */
+    font-size: 20px;
+    text-align: left;
+    background-color: #1df516;
+    /* Borda cinza */
 
 }
 
@@ -156,6 +153,7 @@ h1 {
     cursor: pointer; 
     position: relative; 
     overflow: hidden; 
+    
 }
 
 #dado::before {
@@ -180,10 +178,10 @@ h1 {
 
 .cartarel{
     height: 400px;
-    width: 300px;
+    width: 250px;
     margin: auto;
     margin-bottom: 30px;
-    background-color: #fa0606;
+    background-color: #ff0000;
     padding: 20px;
     border-radius: 20px;
     color: white;
@@ -194,6 +192,7 @@ h1 {
     justify-content: center;
     border: 3px solid #2c2c2c; /* Borda cinza */
     font-size: 20px;
+    text-align: left;
 }
 
 #normal{
