@@ -104,5 +104,10 @@ $("#normal").click(()=>{
 
 $('#config').click(function() {
     $('#menuconfig').toggle(); // Alterna a visibilidade do menuconfig
+})
+
+$("#suaconta").click(() => {
+    window.location.href = 'perfil.html';
 });
+
 
