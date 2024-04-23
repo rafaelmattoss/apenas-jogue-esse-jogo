@@ -32,3 +32,13 @@ body{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#volt{
+   display: block;
+   margin: auto;
+   padding: 10px;
+   background-color: rgb(255, 68, 0);
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}

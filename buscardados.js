@@ -19,12 +19,13 @@ function buscarDados(user) {
                 document.getElementById("nome").textContent = `Nome: ${userData.nome}`;
                 document.getElementById("email").textContent = `Email: ${userData.email}`;
                 document.getElementById("senha").textContent = `Senha: ${userData.senha}`;
+                document.getElementById("uid").textContent = `ID: ${userData.uid}`;
             } else {
-                console.log("Documento do usuário não encontrado no Firestore.");
+                alert("Documento do usuário não encontrado no Firestore.");
             }
         })
         .catch((error) => {
-            console.error("Erro ao buscar dados do Firestore:", error);
+            
             alert("Erro ao buscar dados. Consulte o console para mais detalhes.");
         });
 }
