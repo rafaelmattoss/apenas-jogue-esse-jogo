@@ -1,7 +1,7 @@
 firebase.auth().onAuthStateChanged(user => {
 
     if (user) {
-        console.log("UID do usuário autenticado:", user.uid);
+       
         buscarDados(user); // Chama a função buscarDados com o usuário autenticado
     }
 });
