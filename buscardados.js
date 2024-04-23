@@ -1,11 +1,16 @@
 firebase.auth().onAuthStateChanged(user => {
+
     if (user) {
         console.log("UID do usuário autenticado:", user.uid);
         buscarDados(user); // Chama a função buscarDados com o usuário autenticado
     }
 });
 
+
 function buscarDados(user) {
+    
+    
+    
     const db = firebase.firestore();
 
     // Consulta ao Firestore para obter o documento do usuário pelo UID
@@ -29,3 +34,5 @@ function buscarDados(user) {
             alert("Erro ao buscar dados. Consulte o console para mais detalhes.");
         });
 }
+
+
