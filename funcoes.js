@@ -110,4 +110,9 @@ $("#suaconta").click(() => {
     window.location.href = 'perfil.html';
 });
 
+$("#regras").click(() => {
+    window.location.href = 'regras.html';
+});
+
+
 
