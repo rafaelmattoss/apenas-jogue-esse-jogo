@@ -17,8 +17,6 @@ function login(email, senha) {
     firebase.auth().signInWithEmailAndPassword(email, senha)
         .then((userCredential) => {
             const user = userCredential.user;
-            console.log("Login bem-sucedido:", user);
-            // Redireciona para jogo.html após o login
             window.location.href = 'jogo.html';
         })
         .catch((error) => {
