@@ -30,7 +30,7 @@ function buscarDados(user) {
         })
         .catch((error) => {
             
-            alert("Erro ao buscar dados. Consulte o console para mais detalhes.");
+            ;
         });
 }
 

@@ -39,6 +39,7 @@ $(document).ready(function() {
     $('#relacon').click(function() {
         $("body").addClass("novo-papel-de-parede")
         $("#normal").show();
+        $("#relacon").hide();
     
 
         // Oculta todas as cartas ao clicar no botão
@@ -112,6 +113,10 @@ $("#suaconta").click(() => {
 
 $("#regras").click(() => {
     window.location.href = 'regras.html';
+});
+
+$("#confi").click(() => {
+    window.location.href = 'confi.html';
 });
 
 
