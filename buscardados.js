@@ -23,7 +23,6 @@ function buscarDados(user) {
                 document.getElementById("principal-nome").textContent = userData.nome;
                 document.getElementById("nome").textContent = `Nome: ${userData.nome}`;
                 document.getElementById("email").textContent = `Email: ${userData.email}`;
-                document.getElementById("senha").textContent = `Senha: ${userData.senha}`;
                 document.getElementById("uid").textContent = `ID: ${userData.uid}`;
             } else {
                 alert("Documento do usuário não encontrado no Firestore.");
