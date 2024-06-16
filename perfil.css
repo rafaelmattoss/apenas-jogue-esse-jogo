@@ -51,6 +51,7 @@ body{
 }
 
 #recoveremail, #recoversenha{
+    margin-top: 110px;
     padding: 5px;
     background-color: maroon;
     color: antiquewhite;
