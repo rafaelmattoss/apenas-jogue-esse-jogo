@@ -155,7 +155,7 @@ h1 {
 /* Adiciona sombra às divs dentro de #cartasint e #cartascon */
 #conhecer div,
 #intimidade div {
-    box-shadow: 20px 10px 20px rgb(0, 0, 0); 
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.473); 
 }
 
 
