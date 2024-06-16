@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $("#fechar").hide();
     // Oculta todas as cartas no início
     $("#normal").hide();
     $('.cartaint, .cartacon, .desafio, .cartarel').hide();
@@ -104,8 +105,18 @@ $("#normal").click(()=>{
 });
 
 $('#config').click(function() {
-    $('#menuconfig').toggle(); // Alterna a visibilidade do menuconfig
+    $('#config').hide()
+    $("#fechar").show()
+    $('#menuconfig').show(); // Alterna a visibilidade do menuconfig
 })
+
+$('#fechar').click(function() {
+    $('#config').show()
+    $("#fechar").hide()
+    $('#menuconfig').hide(); // Alterna a visibilidade do menuconfig
+})
+
+
 
 $("#suaconta").click(() => {
     window.location.href = 'perfil.html';

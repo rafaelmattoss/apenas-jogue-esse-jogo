@@ -2,13 +2,13 @@
 
 /* Estilo para o corpo da página */
 body {
-    overflow: hidden;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh; 
     width: 100vw; 
     background: linear-gradient(to bottom, #93ccf0, #f0fcff);
+    background-repeat: no-repeat;
     
 }
 
@@ -19,9 +19,25 @@ body {
     margin-top: 20px;
 }
 
+#fechar{
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#fechar:hover{
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    padding: 10px;
+    width: 25px;
+    margin: auto;
+    border-radius: 50%;
+    transition: 0.5;
+}
+
 #config:hover{
     cursor: pointer;
-    background-color: rgb(251, 255, 0);
     color: black;
     padding: 10px;
     width: 25px;
