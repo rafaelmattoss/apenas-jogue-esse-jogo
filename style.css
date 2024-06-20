@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Estilo para o corpo da página */
 body {
@@ -68,6 +69,8 @@ body {
 #menuconfig li {
     padding: 10px;
     cursor: pointer;
+    font-family: "Libre Franklin", sans-serif;  
+
 }
 
 #menuconfig li:hover {
@@ -93,7 +96,7 @@ body {
     color: black; /* Cor do texto cinza escuro */
     padding: 20px;
     border-radius: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Libre Franklin", sans-serif;  ;
     text-align: center;
     display: flex;
     align-items: center;
@@ -116,7 +119,7 @@ body {
     padding: 20px;
     border-radius: 20px;
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Libre Franklin", sans-serif;  ;
     text-align: center;
     display: flex;
     align-items: center;
@@ -126,6 +129,7 @@ body {
     animation: pulse 2s infinite;
 }
 
+   
 
 .cartacon{
     height: 400px;
@@ -136,7 +140,7 @@ body {
     padding: 20px;
     border-radius: 20px;
     color: rgb(0, 0, 0);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Libre Franklin", sans-serif;  ;
     text-align: center;
     display: flex;
     align-items: center;
@@ -224,7 +228,7 @@ h1 {
     padding: 20px;
     border-radius: 20px;
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Libre Franklin", sans-serif;  ;
     text-align: center;
     display: flex;
     align-items: center;
