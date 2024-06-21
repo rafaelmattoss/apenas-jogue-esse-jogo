@@ -22,9 +22,9 @@ body{
     background-color: white;
     padding: 20px;
     width: 300px;
-    height: 300px;
     align-items: center;
     border-radius: 20px;
+    margin-bottom: 50px;
 
 }
 
@@ -50,11 +50,39 @@ body{
     background-color: rgb(5, 168, 168);
 }
 
-#recoveremail, #recoversenha{
-    margin-top: 110px;
+#recoversenha{
+    margin-top: 80px;
     padding: 5px;
-    background-color: maroon;
-    color: antiquewhite;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 30px;
+    background-color: rgb(93, 235, 93);
+    margin-left: 50px;
+
 }
+
+
+#recoveremail{
+    margin-top: 80px;
+    padding: 5px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    background-color: rgb(93, 235, 93);
+    margin-left: -20px;
+
+} 
+
+#emailrec{
+    padding: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+
+
+
+
+
+
+

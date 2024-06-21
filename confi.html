@@ -9,34 +9,28 @@
 </head>
 <body id="confi">
 
-    <span class="material-symbols-outlined" id="perfil">
-        person </span>
+    <span class="material-symbols-outlined" id="perfil">person</span>
 
-        <h1 id="principal-nome"></h1>
+    <h1 id="principal-nome"></h1>
 
-        <div id="user">
+    <div id="user">
+        <p id="nome"></p>
+        <p id="email"></p>
+        <p id="senha"></p>
+        <a id="volt" href="jogo.html">Voltar</a>
 
-            <p id="nome"></p>
-            <p id="email"></p>
-            <p id="senha"></p>
+            <input type="email" name="emailrec" id="emailrec" placeholder="Digite um email">
 
-       
-    
+        <button id="recoveremail">Alterar E-mail</button>
+        <button id="recoversenha">Alterar Senha</button>
+    </div>
 
-            <a id="volt" href="jogo.html">Voltar</a>
-
-            <button id="recoveremail">Alterar E-mail</button>
-            <button id="recoversenha">Alterar Senha</button>
-
-        </div>
-
-
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-        <script src="firebase.js"></script>
-        <script src="buscardados.js"></script>
-        
-    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="firebase.js"></script>
+    <script src="buscardados.js"></script>
+    <script src="recuperar.js"></script>
 </body>
 </html>
