@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#recoversenha').click(recuperarSenha);
-    $("#recoveremail").click(alteraremail)
+    $("#recoveremail").click(alterarEmail)
 });
 
 function recuperarSenha() {
@@ -29,34 +29,53 @@ function recuperarSenha() {
 
 
 
-function alteraremail() {
+function alterarEmail() {
     const user = firebase.auth().currentUser;
-    const novoemail = $("#emailrec").val();
+    const novoEmail = $("#emailrec").val();
+    const senhaAtual = prompt("Por favor, insira sua senha atual para confirmar:");
 
-    if (!novoemail) {
+    if (!novoEmail) {
         alert("Por favor, insira um endereço de e-mail válido.");
         return;
     }
 
-    if (novoemail) {
-        user.updateEmail(novoemail)
+    if (user) {
+        // Reautenticar o usuário
+        const credential = firebase.auth.EmailAuthProvider.credential(user.email, senhaAtual);
+        user.reauthenticateWithCredential(credential)
             .then(() => {
-                alert("Email alterado com sucesso para " + novoemail);
+                console.log("Reautenticação bem-sucedida.");
+                // Atualizar o email após a reautenticação
+                user.updateEmail(novoEmail)
+                    .then(() => {
+                        console.log("Email atualizado para:", novoEmail);
+                        // Enviar email de verificação para o novo email
+                        return user.sendEmailVerification();
+                    })
+                    .then(() => {
+                        alert("Email alterado com sucesso para " + novoEmail + ". Por favor, verifique o novo endereço de email.");
+                    })
+                    .catch((error) => {
+                        console.error("Erro durante a atualização/verificação do email:", error);
+                        if (error.code === "auth/email-already-in-use") {
+                            alert("Este endereço de e-mail já está em uso por outra conta.");
+                        } else if (error.code === "auth/requires-recent-login") {
+                            alert("Por favor, faça login novamente e tente atualizar o email.");
+                        } else {
+                            alert("Erro ao atualizar/verificar o email: " + error.message);
+                        }
+                    });
             })
             .catch((error) => {
-                if (error.code === "auth/email-already-in-use") {
-                    alert("Este endereço de e-mail já está em uso por outra conta.");
-                } else if (error.code === "auth/requires-recent-login") {
-                    alert("Por favor, verifique o novo endereço de e-mail antes de alterá-lo.");
-                } else {
-                    alert("Erro ao atualizar o email: " + error.message);
-                }
-                console.error("Erro ao atualizar email:", error);
+                console.error("Erro na reautenticação:", error);
+                alert("Erro na reautenticação: " + error.message);
             });
     } else {
         alert("Nenhum usuário está logado.");
     }
 }
+
+
     
 
 
