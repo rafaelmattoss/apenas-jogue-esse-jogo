@@ -4,36 +4,55 @@ $(document).ready(function() {
     $("#normal").hide();
     $('.cartaint, .cartacon, .desafio, .cartarel').hide();
 
-    // Manipulação do clique no dado
-    $('#dado').click(function() {
-        // Adiciona a classe de animação ao dado
-        $(this).addClass('spin-animation');
+let exibidas = [];
 
-        // Remove a classe de animação após 1 segundo (1000 milissegundos)
-        setTimeout(() => {
-            $(this).removeClass('spin-animation');
-        }, 1000);
+// Manipulação do clique no dado
+$('#dado').click(function() {
+    // Adiciona a classe de animação ao dado
+    $(this).addClass('spin-animation');
 
-        // Oculta todas as cartas ao clicar no dado
-        $('.cartaint, .cartacon, .desafio, .cartarel').hide();
+    // Remove a classe de animação após 1 segundo (1000 milissegundos)
+    setTimeout(() => {
+        $(this).removeClass('spin-animation');
+    }, 1000);
 
-        // Gera um número aleatório entre 0 e 99
-        var randomPercent = Math.floor(Math.random() * 100);
+    // Oculta todas as cartas ao clicar no dado
+    $('.cartaint, .cartacon, .desafio, .cartarel').hide();
 
-        // Verifica se o número está dentro dos 3% desejados para exibir um desafio
-        if (randomPercent < 3) {
-            var $desafios = $('.desafio:not(:visible)');
-            if ($desafios.length > 0) {
-                var randomDesafio = Math.floor(Math.random() * $desafios.length);
-                $desafios.eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
-            }
-        } else {
-            var $cartas = $('.cartaint, .cartacon:not(:visible)');
-            if ($cartas.length > 0) {
-                var randomCarta = Math.floor(Math.random() * $cartas.length);
-                $cartas.eq(randomCarta).fadeIn(1000); // Exibe uma carta aleatória
-            }
+    // Gera um número aleatório entre 0 e 99
+    var randomPercent = Math.floor(Math.random() * 100);
+
+    // Verifica se o número está dentro dos 3% desejados para exibir um desafio
+    if (randomPercent < 3) {
+        var $desafios = $('.desafio:not(:visible)');
+        if ($desafios.length > 0) {
+            var randomDesafio = Math.floor(Math.random() * $desafios.length);
+            $desafios.eq(randomDesafio).fadeIn(1000); // Exibe um desafio aleatório
         }
+    } else {
+        // Seleciona todas as cartas visíveis exceto as que já foram exibidas
+        var $cartas = $('.cartaint:not(:visible), .cartacon:not(:visible)').filter(function() {
+            return !exibidas.includes($(this).text());
+        });
+
+        // Reinicia a lista de exibidas se todas as cartas já foram mostradas
+        if ($cartas.length === 0) {
+            exibidas = [];
+            $cartas = $('.cartaint:not(:visible), .cartacon:not(:visible)');
+        }
+
+        if ($cartas.length > 0) {
+            var randomCarta = Math.floor(Math.random() * $cartas.length);
+            var $cartaSelecionada = $cartas.eq(randomCarta);
+            $cartaSelecionada.fadeIn(1000); // Exibe uma carta aleatória
+
+            // Adiciona o texto da carta exibida ao array de exibidas
+            exibidas.push($cartaSelecionada.text());
+        }
+    }
+});
+
+        
     });
 
     // Manipulação do clique no botão relacon
@@ -61,7 +80,7 @@ $(document).ready(function() {
 
        
     });
-});
+
 
 
 

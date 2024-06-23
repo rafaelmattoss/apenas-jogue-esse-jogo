@@ -106,7 +106,7 @@ body {
     border: 3px solid #2c2c2c; /* Borda cinza */
     font-size: 20px;
     text-align: left;
-    line-height: 40px;
+    line-height: 30px;
 
 }
 
@@ -151,7 +151,7 @@ body {
     border: 3px solid #2c2c2c; /* Borda cinza */
     font-size: 20px;
     text-align: left;
-    line-height: 40px;
+    line-height: 30px;
     background: #98FB98; /* Padrão: PaleGreen */
     background: -webkit-linear-gradient(top, #98FB98, #00FA9A); /* Chrome 10-25, Safari 5.1-6 */
     background: -o-linear-gradient(top, #98FB98, #00FA9A); /* Opera 11.1-12 */
