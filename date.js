@@ -18,9 +18,9 @@ $(document).ready(function() {
         }, 1000);
 
     
-        $(".familia").hide();
+        $(".date").hide();
 
-        var $cartas = $('.familia:not(:visible)');
+        var $cartas = $('.date:not(:visible)');
         
         // Verifica se há alguma div disponível para mostrar
         if ($cartas.length > 0) {

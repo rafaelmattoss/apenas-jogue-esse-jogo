@@ -7,11 +7,11 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw; 
-    background: #e0c4a1; /* Padrão: Bisque */
-    background: -webkit-linear-gradient(top, #f5c07f, #FFDAB9, #FFDEAD); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #e7c396, #ffb370, #FFDEAD); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #af9576, #da975c, #dfaf68); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #ffce93, #fdc28e, #FFDEAD); /* Standard syntax */
+    background: #fdc9ff; /* Padrão: Bisque */
+    background: -webkit-linear-gradient(top, #e397fa, #f86ae5, #cf10f5); /* Chrome 10-25, Safari 5.1-6 */
+    background: -o-linear-gradient(top, #c996e7, #ff40bf, #f8adff); /* Opera 11.1-12 */
+    background: -moz-linear-gradient(top, #b105a8, #e73cfd, #c37bff); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom, #f83d75, #ff0095, #ff184a); /* Standard syntax */
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
