@@ -27,13 +27,77 @@
 
 
 #classico, #date, #familia, #namoro{
-    width: 100px;
+    width: 120px;
     height: 100px;
     background-color: white;
     border-radius: 10px;
     margin-top: 50%;
     margin-left: 50%;
     transform: translate(-50%, -50%);  
+}
+
+.jogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogo p {
+    margin: -40px;
+    font-family:"Libre Franklin", sans-serif; ; /* Espaço entre a div e o parágrafo */
+    font-size: 18px;
+    color: white;
+    
+}
+
+#opcoes{
+    display: flex;
+    justify-content: right;
+    gap: 65%;
+
+}
+
+#opcoes > span{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px ;
+    font-size: 30px;
+    color: white;
+}
+
+#menuconfig{
+    display: flex;
+    justify-content: right;
+    gap: 65%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index:  
+    top
+}
+
+
+
+#menuconfig ul {
+list-style-type: none;
+padding: 0;
+width: 200px;
+background-color: white;
+padding: 20px;
+border-radius: 20px;
+margin-right: 20px;
+
+}
+
+#menuconfig li {
+padding: 10px;
+cursor: pointer;
+font-family: "Libre Franklin", sans-serif;  
+
+}
+
+#menuconfig li:hover {
+background-color: #e0e0e0;
 }
 
 

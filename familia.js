@@ -60,6 +60,6 @@ $("#confi").click(() => {
     window.location.href = 'confi.html';
 });
 
-$("#volt").click(() => {
-    window.location.href = 'index.html';
+$("#sair").click(() => {
+    window.location.href = 'home.html';
 });
