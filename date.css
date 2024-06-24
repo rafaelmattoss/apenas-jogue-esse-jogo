@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw; 
-    background: #fdc9ff; /* Padrão: Bisque */
+    background: #fcb4ff; /* Padrão: Bisque */
     background: -webkit-linear-gradient(top, #e397fa, #f86ae5, #cf10f5); /* Chrome 10-25, Safari 5.1-6 */
     background: -o-linear-gradient(top, #c996e7, #ff40bf, #f8adff); /* Opera 11.1-12 */
     background: -moz-linear-gradient(top, #b105a8, #e73cfd, #c37bff); /* Firefox 3.6-15 */
@@ -86,7 +86,7 @@ body {
     min-height: 100vh;
 }
 
-.familia{
+.date{
     height: 400px;
     width: 250px;
     margin: auto;
@@ -104,7 +104,7 @@ body {
     font-size: 20px;
     text-align: left;
     line-height: 30px;
-    background-color: rgb(245, 140, 92);
+    background: linear-gradient(to bottom right, #862db9, #fc0aab);
     display: flex;
     flex-direction: column;
     align-items: center;

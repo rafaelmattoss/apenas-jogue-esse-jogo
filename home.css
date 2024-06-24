@@ -1,0 +1,39 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+#corpo{
+    font-family: "Libre Franklin", sans-serif; ;
+    margin: 0;
+    padding: 0;
+    width: 100vw; 
+    background: #514eff; /* Padrão: Light Blue */
+    background: -webkit-linear-gradient(top, #70c9ec, #007bff, #3571e2); /* Chrome 10-25, Safari 5.1-6 */
+    background: -o-linear-gradient(top, #65f8d3, #007bff, #33dbf5); /* Opera 11.1-12 */
+    background: -moz-linear-gradient(top, #5bded8, #007bff, #2dd9f3); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom, #4964fd, #007bff, #3de2fc); /* Standard syntax */
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#jogos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas com largura igual */
+    gap: 20px; /* Espaço entre as colunas e linhas */
+    justify-content: center;
+}
+
+
+#classico, #date, #familia, #namoro{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+
