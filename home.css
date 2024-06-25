@@ -29,7 +29,7 @@
     justify-content: center;
     width: 100px;
     height: 100px;
-    animation: flutuar 3s  linear infinite;
+    animation: flutuar 1.5s  linear infinite;
     border-radius: 10px;
     
 }
@@ -135,6 +135,6 @@
     }
 
     50%{
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
 }

@@ -7,11 +7,11 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw; 
-    background: #fcb4ff; /* Padrão: Bisque */
-    background: -webkit-linear-gradient(top, #e397fa, #f86ae5, #cf10f5); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #c996e7, #ff40bf, #f8adff); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #b105a8, #e73cfd, #c37bff); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #f83d75, #ff0095, #ff184a); /* Standard syntax */
+    background: #ff0000; /* Padrão: Bisque */
+    background: -webkit-linear-gradient(top, #ffffff, #ffbef6, #f55110); /* Chrome 10-25, Safari 5.1-6 */
+    background: -o-linear-gradient(top, #fdcce0, #fd5d5d, #ff0000); /* Opera 11.1-12 */
+    background: -moz-linear-gradient(top, #f86666, #f8652a, #bb0000); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom, #ff0263, #ff1d1d, #ffb6c6); /* Standard syntax */
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -86,7 +86,7 @@ body {
     min-height: 100vh;
 }
 
-.date{
+.cartarel{
     height: 400px;
     width: 250px;
     margin: auto;
@@ -104,7 +104,8 @@ body {
     font-size: 20px;
     text-align: left;
     line-height: 30px;
-    background: linear-gradient(to bottom right, #862db9, #fc0aab);
+     background-color: chocolate;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,4 +163,32 @@ body {
 
 #dado.spin-animation {
     animation: spin 1s linear ; 
+}
+
+@media (max-width: 768px) {
+
+    #menuconfig{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 130px; /* Ajuste a largura conforme necessário */
+        height: 100%;
+        background-color: #ffffff; /* Ajuste a cor conforme necessário */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        z-index: 1000; /* Certifique-se de que o menu fica no topo */
+        display: none;
+}
+
+#menuconfig li {
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Libre Franklin", sans-serif; 
+    font-size: 15px; 
+
+}
 }

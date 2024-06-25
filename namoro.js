@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
     // Oculta todas as divs com a classe 'familia'
-    $(".familia").hide();
+    $(".cartarel").hide();
     $("#fechar").hide();
     $("#normal").hide();
     
@@ -18,9 +18,9 @@ $(document).ready(function() {
         }, 1000);
 
     
-        $(".familia").hide();
+        $(".cartarel").hide();
 
-        var $cartas = $('.familia:not(:visible)');
+        var $cartas = $('.cartarel:not(:visible)');
         
         // Verifica se há alguma div disponível para mostrar
         if ($cartas.length > 0) {

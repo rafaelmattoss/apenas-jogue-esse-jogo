@@ -15,6 +15,10 @@ $("#date").click(function() {
     window.location.href = 'date.html';
 });
 
+$("#namoro").click(function() {
+    window.location.href = 'namoro.html';
+});
+
 $("#suaconta").click(() => {
     window.location.href = 'perfil.html';
 });
