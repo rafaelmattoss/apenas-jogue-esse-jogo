@@ -1,13 +1,11 @@
-
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-#corpo{
-    font-family: "Libre Franklin", sans-serif; ;
+#corpo {
+    font-family: "Libre Franklin", sans-serif;
     margin: 0;
     padding: 0;
-    width: 100vw; 
+    width: 100vw;
     background: #514eff; /* Padrão: Light Blue */
     background: -webkit-linear-gradient(top, #70c9ec, #007bff, #3571e2); /* Chrome 10-25, Safari 5.1-6 */
     background: -o-linear-gradient(top, #65f8d3, #007bff, #33dbf5); /* Opera 11.1-12 */
@@ -18,25 +16,28 @@
     min-height: 100vh;
 }
 
-#jogos{
+#jogos {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Duas colunas com largura igual */
     gap: 20px; /* Espaço entre as colunas e linhas */
     justify-content: center;
 }
 
-
-#classico, #date, #familia, #namoro{
+#classico, #date, #familia, #namoro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100px;
     height: 100px;
     background-color: white;
     border-radius: 10px;
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);  
 }
 
-.jogo{
+.material-symbols-outlined {
+    font-size: 48px; /* Tamanho dos ícones */
+}
+
+.jogo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,60 +45,50 @@
 }
 
 .jogo p {
-    margin-top: -40px;
-    font-family:"Libre Franklin", sans-serif; 
+    margin-top: 10px; /* Ajuste a margem conforme necessário */
+    font-family: "Libre Franklin", sans-serif;
     font-size: 18px;
     color: white;
-    
 }
 
-#opcoes{
+#opcoes {
     display: flex;
     justify-content: right;
-  
-
 }
 
-#opcoes > span{
+#opcoes > span {
     margin-top: 50px;
     margin-left: 20px;
-    margin-right: 20px ;
+    margin-right: 20px;
     font-size: 30px;
     color: white;
+    margin-bottom: 100px;
 }
 
-#menuconfig{
+#menuconfig {
+    margin-top: -130px;
     display: flex;
     justify-content: right;
     gap: 65%;
     padding: 20px;
-    
-    z-index:  
-    top
 }
 
-
-
 #menuconfig ul {
-list-style-type: none;
-padding: 0;
-width: 200px;
-background-color: white;
-padding: 20px;
-border-radius: 20px;
-margin-right: 20px;
-
+    list-style-type: none;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
 }
 
 #menuconfig li {
-padding: 10px;
-cursor: pointer;
-font-family: "Libre Franklin", sans-serif;  
-
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Libre Franklin", sans-serif;
 }
 
 #menuconfig li:hover {
-background-color: #e0e0e0;
+    background-color: #e0e0e0;
 }
-
-
