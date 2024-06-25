@@ -27,7 +27,7 @@
 
 
 #classico, #date, #familia, #namoro{
-    width: 120px;
+    width: 100px;
     height: 100px;
     background-color: white;
     border-radius: 10px;
@@ -44,8 +44,8 @@
 }
 
 .jogo p {
-    margin: -40px;
-    font-family:"Libre Franklin", sans-serif; ; /* Espaço entre a div e o parágrafo */
+    margin-top: -40px;
+    font-family:"Libre Franklin", sans-serif; 
     font-size: 18px;
     color: white;
     
@@ -54,7 +54,7 @@
 #opcoes{
     display: flex;
     justify-content: right;
-    gap: 65%;
+  
 
 }
 
@@ -71,7 +71,7 @@
     justify-content: right;
     gap: 65%;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    
     z-index:  
     top
 }
