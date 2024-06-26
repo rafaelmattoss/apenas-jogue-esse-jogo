@@ -1,6 +1,15 @@
 $("#menuconfig").hide()
+$("#close").hide()
 
 $("#configuracoes").click(()=>{
+    $("#configuracoes").hide()
+    $("#close").show()
+    $("#menuconfig").toggle()
+})
+
+$("#close").click(()=>{
+    $("#configuracoes").show()
+    $("#close").hide()
     $("#menuconfig").toggle()
 })
 $("#classico").click(function() {
