@@ -10,6 +10,26 @@ body {
     background: -moz-linear-gradient(top, #ff9575, #ef4d24);
     background: linear-gradient(top, #ff75d6, #ef24de);
 }
+
+#erros{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: "Libre Franklin", sans-serif;
+      
+}
+
+#sucesso{
+    background-color: rgb(60, 255, 0);
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: "Libre Franklin", sans-serif; 
+     
+}
 form {
     
     margin: 50px auto;

@@ -20,6 +20,27 @@ h2 {
     font-weight: 400;
 }
 
+#erroruser, #errorrcoversenha, #errorfalha, #errorcampos ,#erroremail{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: none;
+    font-family: "Libre Franklin", sans-serif;  
+}
+
+#sucesemail{
+    background-color: greenyellow;
+    font-family: "Libre Franklin", sans-serif; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px; 
+    display: none;
+    color: black;
+}
+
 #imglogin {
     font-size: 60px; /* Aumenta o tamanho do ícone */
     color: rgb(255, 255, 255);

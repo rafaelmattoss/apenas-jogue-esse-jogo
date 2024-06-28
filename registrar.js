@@ -1,7 +1,9 @@
 $(document).ready(function() {
+    let diverros = $("#erros");
+    diverros.hide();
+    $("#sucesso").hide()
     $("#registrar").click(function() {
-        animaçãoDecarregamento(); 
-        validarRegistro(); 
+        validarRegistro();
     });
 });
 
@@ -20,10 +22,12 @@ function validarRegistro() {
     };
     
     const erros = [];
+    let diverros = $("#erros");
+    diverros.hide(); // Esconde a div de erros inicialmente
 
     if (!usuario.nome) {
-        erros.push("Por favor, informe seu nome completo.");
-    }
+        erros.push("Por favor, informe seu nome completo." ) ;
+    } 
 
     if (!usuario.email) {
         erros.push("Por favor, informe seu e-mail.");
@@ -45,11 +49,12 @@ function validarRegistro() {
 
     if (erros.length > 0) {
         // Se houver erros, exibe mensagens de erro e interrompe o registro
-        alert(erros.join("\n"));
+        diverros.text(erros.join("\n")).show();
         return;
     }
 
-    // Se não houver erros, tenta registrar o usuário
+    // Se não houver erros, inicia a animação de carregamento e tenta registrar o usuário
+    animaçãoDecarregamento();
     registrarUsuario(usuario);
 }
 
@@ -69,6 +74,7 @@ function registrarUsuario(usuario) {
             if (signInMethods && signInMethods.length > 0) {
                 // Email já está em uso, exibe alerta ao usuário
                 alert("O e-mail já está registrado. Por favor, use outro e-mail.");
+                removeAnimaçãoDecarregamento(); // Remove a animação de carregamento
             } else {
                 // Email não está em uso, cria o usuário com e-mail e senha no Firebase Authentication
                 return firebase.auth().createUserWithEmailAndPassword(email, senha)
@@ -88,15 +94,17 @@ function registrarUsuario(usuario) {
                     })
                     .then(() => {
                         // Registro concluído com sucesso
-                        alert("Conta criada com sucesso! Faça login para acessar.");
+                        $("#sucesso").show();
                         window.location.href = 'index.html';
                         limparCampos(); 
+                        removeAnimaçãoDecarregamento(); // Remove a animação de carregamento
                     });
             }
         })
         .catch((error) => {
             console.error("Erro ao registrar usuário:", error);
             alert("Ocorreu um erro ao criar a conta. Por favor, tente novamente.");
+            removeAnimaçãoDecarregamento(); // Remove a animação de carregamento
         });
 }
 
@@ -105,4 +113,12 @@ function limparCampos() {
     $("#emailr").val("");
     $("#senhar").val("");
     $("#confirmarSenhar").val("");
+}
+
+function animaçãoDecarregamento() {
+    // Implemente a animação de carregamento aqui
+}
+
+function removeAnimaçãoDecarregamento() {
+    // Implemente a remoção da animação de carregamento aqui
 }
