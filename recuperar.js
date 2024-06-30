@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $("#sucesemail").hide()
     $('#recoversenha').click(recuperarSenha);
     $("#recoveremail").click(alterarEmail)
 });
@@ -12,7 +13,14 @@ function recuperarSenha() {
 
         firebase.auth().sendPasswordResetEmail(email)
             .then(() => {
-                alert("Um e-mail de redefinição de senha foi enviado com sucesso para " + email);
+                $("#sucesemail").text("Um e-mail de redefinição de senha foi enviado com sucesso para  "  + email)
+                $("#sucesemail").show()
+                setTimeout(() => {
+                    $("#sucesemail").hide();;
+                  }, 2000);
+                return;
+                
+
             })
             .catch((error) => {
                 if (error.code === "auth/user-not-found") {
@@ -44,7 +52,6 @@ function alterarEmail() {
         const credential = firebase.auth.EmailAuthProvider.credential(user.email, senhaAtual);
         user.reauthenticateWithCredential(credential)
             .then(() => {
-                console.log("Reautenticação bem-sucedida.");
                 // Atualizar o email após a reautenticação
                 user.updateEmail(novoEmail)
                     .then(() => {
@@ -53,7 +60,12 @@ function alterarEmail() {
                         return user.sendEmailVerification();
                     })
                     .then(() => {
-                        alert("Email alterado com sucesso para " + novoEmail + ". Por favor, verifique o novo endereço de email.");
+                        $("#sucesemail").text("Email alterado com sucesso para " + novoEmail + ". Por favor, verifique o novo endereço de email.")
+                        $("#sucesemail").show()
+                        setTimeout(() => {
+                            $("#sucesemail").hide();;
+                        }, 4000);
+                return;
                     })
                     .catch((error) => {
                         console.error("Erro durante a atualização/verificação do email:", error);
