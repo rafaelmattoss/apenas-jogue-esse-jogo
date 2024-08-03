@@ -40,7 +40,16 @@ $("#confi").click(() => {
     window.location.href = 'confi.html';
 });
 
+$("#curiosidade").click(() => {
+    $("#alertcurios").show()
+});
+
+$("#fecharalert").click(() => {
+    $("#alertcurios").hide()
+});
+
 $("#logout").click(logOut)
+
 
 function logOut() {
     firebase.auth().signOut()
@@ -51,3 +60,5 @@ function logOut() {
             alert('Erro ao fazer logout. Por favor, tente novamente.');
         });
 }
+
+
