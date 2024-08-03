@@ -94,7 +94,7 @@ body {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: "Libre Franklin", sans-serif;  ;
     text-align: center;
     display: flex;
@@ -104,7 +104,11 @@ body {
     font-size: 20px;
     text-align: left;
     line-height: 30px;
-    background-color: rgb(243, 255, 136);
+    background: #ce0000; /* Padrão: Bisque */
+    background: -webkit-linear-gradient(top, #ff2828, #f886b2, #ff0a0a); /* Chrome 10-25, Safari 5.1-6 */
+    background: -o-linear-gradient(top, #da0049, #ea49ff, #ac001d); /* Opera 11.1-12 */
+    background: -moz-linear-gradient(top, #d021fc, #722af8, #8000bb); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom, #fd0c2c, #d42390fa, #fd7295); /* Standard syntax */
     display: flex;
     flex-direction: column;
     align-items: center;
