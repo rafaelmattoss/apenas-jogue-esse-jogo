@@ -41,11 +41,11 @@ $("#confi").click(() => {
 });
 
 $("#curiosidade").click(() => {
-    $("#alertcurios").show()
+    $("#alertcurios").fadeIn(300);
 });
 
 $("#fecharalert").click(() => {
-    $("#alertcurios").hide()
+    $("#alertcurios").fadeOut(300)
 });
 
 $("#logout").click(logOut)
