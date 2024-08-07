@@ -105,11 +105,12 @@
     right: 10px; /* Ajusta a distância da borda direita da div */
     cursor: pointer; /* Altera o cursor para indicar que é clicável */
     font-weight: bold; /* Opcional: torna o texto mais proeminente */
-    font-size: 18px; /* Tamanho da fonte */
+    font-size: 15px; /* Tamanho da fonte */
     margin-bottom: 20px;
     background-color: red;
-    padding: 5px;
-    border-radius: 30px;
+    padding: 8px;
+    border-radius: 50%;
+    padding: 8px;
     color: white;
     width: 20px;
     height: 20px;
