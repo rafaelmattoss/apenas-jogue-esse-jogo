@@ -5,6 +5,8 @@ $("#configuracoes").click(()=>{
     $("#configuracoes").hide()
     $("#close").show()
     $("#menuconfig").toggle()
+    $("#alertcurios").fadeOut(300);
+
 })
 
 $("#close").click(()=>{
