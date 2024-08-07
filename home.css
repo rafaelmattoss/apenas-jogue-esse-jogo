@@ -108,9 +108,15 @@
     font-size: 18px; /* Tamanho da fonte */
     margin-bottom: 20px;
     background-color: red;
-    padding: 3px;
+    padding: 5px;
     border-radius: 30px;
     color: white;
+    width: 20px;
+    height: 20px;
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: center; /* Alinha horizontalmente no centro */
+    box-sizing: border-box; 
 }
 
 #alertcurios {
