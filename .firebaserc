@@ -1,13 +1,8 @@
 {
   "projects": {
-    "default": "apenas-jogue-esse-jogo",
-    "staging": "apenas-jogue-esse-jogo"
+    "default": "apenas-jogue-esse-jogo"
   },
   "targets": {},
-  "etags": {
-    "apenas-jogue-esse-jogo": {
-      "extensionInstances": {}
-    }
-  },
+  "etags": {},
   "dataconnectEmulatorConfig": {}
 }
