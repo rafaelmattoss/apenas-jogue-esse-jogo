@@ -195,6 +195,15 @@
     background-color: #e0e0e0;
 }
 
+#premium-button{
+    padding: 10px;
+    margin: auto;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: yellow;
+    border-radius: 20px;
+}
+
 @keyframes flutuar{
     0%{transform: translateY(0);}
     50%{transform: translateY(-15px);}

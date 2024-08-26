@@ -1,6 +1,11 @@
 $("#menuconfig").hide()
 $("#close").hide()
 
+
+const mp = new MercadoPago('APP_USR-e02068c2-985b-42bc-b0e7-74f48594666b');
+const bricksBuilder = mp.bricks();
+
+
 $("#configuracoes").click(()=>{
     $("#configuracoes").hide()
     $("#close").show()
