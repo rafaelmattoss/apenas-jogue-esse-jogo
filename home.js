@@ -27,6 +27,10 @@ $("#familia").click(function() {
     window.location.href = 'familia.html';
 });
 
+$("#amigo").click(function() {
+    window.location.href = 'amigos.html';
+});
+
 $("#date").click(function() {
     window.location.href = 'date.html';
 });

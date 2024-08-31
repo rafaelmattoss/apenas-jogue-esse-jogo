@@ -30,7 +30,7 @@
     color: rgb(255, 255, 255);
 }
 
-#classico, #date, #familia, #namoro {
+#classico, #date, #familia, #namoro, #amigo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +72,16 @@
     background: -o-linear-gradient(top, #fdcce0, #fd5d5d, #ff0000); /* Opera 11.1-12 */
     background: -moz-linear-gradient(top, #f86666, #f8652a, #bb0000); /* Firefox 3.6-15 */
     background: linear-gradient(to bottom, #ff0263, #ff1d1d, #ffb6c6); /* Standard syntax */
+}
+
+#amigo{
+
+    background: #00ff2a; /* Padrão: Bisque */
+    background: -webkit-linear-gradient(top, #026d16, #0cad42, #18bf37); /* Chrome 10-25, Safari 5.1-6 */
+    background: -o-linear-gradient(top, #2f7b2d, #62b746, #019c15); /* Opera 11.1-12 */
+    background: -moz-linear-gradient(top, #55d137, #369104, #007117); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom, #009b56, #46ac60, #1da532); /* Standard syntax */
+
 }
 
 .material-symbols-outlined {
