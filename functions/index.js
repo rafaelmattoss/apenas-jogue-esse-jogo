@@ -24,8 +24,8 @@ exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `${YOUR_DOMAIN}/success.html`,
-            cancel_url: `${YOUR_DOMAIN}/cancel.html`,
+            success_url: `${YOUR_DOMAIN}/aprov.html`,
+            cancel_url: `${YOUR_DOMAIN}/neg.html`,
         });
 
         // Retorne a ID da sessão para o cliente
