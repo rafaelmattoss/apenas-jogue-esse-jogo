@@ -109,7 +109,7 @@
 }
 
 
-#fecharalert {
+#fecharalert, #fechartorne {
     position: absolute; /* Permite o posicionamento relativo ao #alertcurios */
     top: -10px; /* Ajusta a distância do topo da div */
     right: 10px; /* Ajusta a distância da borda direita da div */
@@ -144,6 +144,25 @@
     z-index: 1000; /* Garante que esteja sobre outros elementos */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
     display: none;
+}
+
+#torne{
+
+    width: 70%;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    line-height: 30px;
+    border-radius: 20px;
+    position: fixed; /* Torna o elemento fixo na tela */
+    top: 50%; /* Posiciona no centro vertical */
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    z-index: 1000; /* Garante que esteja sobre outros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+    display: none;
+    text-align: center;
+
 }
 
 

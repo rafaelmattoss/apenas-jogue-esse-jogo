@@ -28,13 +28,47 @@ exports.createCheckoutSession = functions.https.onRequest((req, res) => {
                 mode: 'payment',
                 success_url: `${YOUR_DOMAIN}/aprov.html`,
                 cancel_url: `${YOUR_DOMAIN}/neg.html`,
+                metadata: {
+                    userId: req.body.userId // Envia o userId como metadado
+                }
             });
 
             // Retorne a ID da sessão para o cliente
             res.json({ sessionId: session.id });
+
         } catch (error) {
-            console.error("Erro ao criar a sessão de checkout", error);
+            console.error("Erro ao criar a sessão de checkout ou ao atualizar o banco de dados", error);
             res.status(500).send(error.message);
         }
     });
+});
+
+exports.verifyCheckoutSession = functions.https.onRequest(async (req, res) => {
+    const sessionId = req.query.session_id;
+
+    try {
+        const session = await stripe.checkout.sessions.retrieve(sessionId);
+
+        if (session.payment_status === 'paid') {
+            res.json({ paid: true, userId: session.metadata.userId });
+        } else {
+            res.json({ paid: false });
+        }
+    } catch (error) {
+        console.error("Erro ao verificar a sessão de checkout", error);
+        res.status(500).send("Erro ao verificar a sessão.");
+    }
+});
+
+exports.updateUserStatus = functions.https.onRequest(async (req, res) => {
+    const { userId, premium } = req.body;
+
+    try {
+        await db.collection('usuarios').doc(userId).update({ premium });
+
+        res.status(200).send('Status do usuário atualizado com sucesso.');
+    } catch (error) {
+        console.error("Erro ao atualizar o status do usuário", error);
+        res.status(500).send('Erro ao atualizar o status do usuário.');
+    }
 });

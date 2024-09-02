@@ -85,7 +85,9 @@ function registrarUsuario(usuario) {
                             uid: user.uid,
                             nome: nome,
                             email: email,
-                            senha: senha
+                            senha: senha,
+                            premium: false
+                            
                             // Adicione outras propriedades do usuário ao objeto userData conforme necessário
                         };
 

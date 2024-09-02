@@ -17,4 +17,35 @@
     </div>
     
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+
+        
+
+        if (sessionId) {
+            fetch(`https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/verifyCheckoutSession?session_id=${sessionId}`)
+                .then(response => response.json())
+                .then(async data => {
+                    if (data.paid) {
+                        // Atualize o status do usuário para premium no Firestore
+                        await fetch('https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/updateUserStatus', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ userId: data.userId, premium: true })
+                        });
+
+                        alert('Você agora é um usuário premium!');
+                    } else {
+                        alert('O pagamento não foi concluído. Tente novamente.');
+                    }
+                })
+                .catch(error => console.error('Erro ao verificar a sessão de pagamento:', error));
+        }
+    });
+</script>
+
 </html>
