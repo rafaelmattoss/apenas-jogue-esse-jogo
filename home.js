@@ -1,24 +1,19 @@
-$("#menuconfig").hide()
-$("#close").hide()
-
-
-const mp = new MercadoPago('APP_USR-7001294782620310-082600-54fb00e6fb8d453a425d9df86a2a2f17-287444255');
-const bricksBuilder = mp.bricks();
-
+$("#menuconfig").hide();
+$("#close").hide();
 
 $("#configuracoes").click(()=>{
-    $("#configuracoes").hide()
-    $("#close").show()
-    $("#menuconfig").toggle()
+    $("#configuracoes").hide();
+    $("#close").show();
+    $("#menuconfig").toggle();
     $("#alertcurios").fadeOut(300);
-
-})
+});
 
 $("#close").click(()=>{
-    $("#configuracoes").show()
-    $("#close").hide()
-    $("#menuconfig").toggle()
-})
+    $("#configuracoes").show();
+    $("#close").hide();
+    $("#menuconfig").toggle();
+});
+
 $("#classico").click(function() {
     window.location.href = 'jogo.html';
 });
@@ -56,11 +51,10 @@ $("#curiosidade").click(() => {
 });
 
 $("#fecharalert").click(() => {
-    $("#alertcurios").fadeOut(300)
+    $("#alertcurios").fadeOut(300);
 });
 
-$("#logout").click(logOut)
-
+$("#logout").click(logOut);
 
 function logOut() {
     firebase.auth().signOut()
@@ -72,35 +66,29 @@ function logOut() {
         });
 }
 
+// Integração com o Stripe para o botão "Torne-se Premium"
+
 $("#premium-button").click(() => {
-    fetch('/create_preference', { // URL da função Firebase que cria a preferência de pagamento
+    const userId = firebase.auth().currentUser.uid;
+
+    fetch('https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/createCheckoutSession', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            email: 'cliente@exemplo.com' // Substitua pelo email do pagador, se necessário
-        })
+        body: JSON.stringify({ userId })
     })
     .then(response => response.json())
     .then(data => {
-        // Inicializa o checkout do Mercado Pago com o ID da preferência
-        bricksBuilder.create("wallet", "wallet_container", {
-            initialization: {
-                preferenceId: data.id // Use o preferenceId retornado pelo backend
-            },
-            customization: {
-                texts: {
-                    valueProp: 'smart_option',
-                },
-            },
-        }).then(function (brick) {
-            brick.show();
-        }).catch(function (error) {
-            console.error('Erro ao inicializar o checkout:', error);
-        });
+        const stripe = Stripe('pk_live_51PjN8Z086aDpYuyzVT7w6smVTTlZa0jT219xzUNwxxOf52uHbYJhEUKetPwBrcu9Qh2JXrOtgaPNrT5Cc2MPctny00XElaXj4A'); // Substitua pela sua chave pública do Stripe
+        return stripe.redirectToCheckout({ sessionId: data.sessionId });
+    
     })
-    .catch(error => console.error('Erro ao criar preferência:', error));
+    .then(result => {
+        if (result.error) {
+            alert(result.error.message);
+        }
+    })
+    .catch(error => console.error('Erro ao criar a sessão de checkout:', error));
 });
-
 
