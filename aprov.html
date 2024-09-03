@@ -3,49 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagamento Aprovado</title>
     <link rel="stylesheet" href="aprov.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-
     <div>
         <span id="aprovv" class="material-symbols-outlined">
             task_alt
-            </span>
+        </span>
         <h1>Pagamento Aprovado</h1>
+        <button>INICIO</button>
     </div>
-    
+
+    <script>
+        // Função para atualizar o status do usuário na Firestore
+        const updateUserStatus = async (userId) => {
+            try {
+                await fetch('https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/updateUserStatus', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ userId, premium: true })
+                });
+            } catch (error) {
+                console.error('Erro ao atualizar status do usuário:', error);
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get('session_id');
+
+            if (sessionId) {
+                fetch(`https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/verifyCheckoutSession?session_id=${sessionId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.paid) {
+                            console.log('Pagamento confirmado e usuário atualizado para premium');
+                            const userId = data.userId; // Pegue o userId retornado
+                            updateUserStatus(userId);
+                        } else {
+                            console.error('Pagamento não confirmado');
+                        }
+                        setTimeout(() => {
+                            window.location.href = 'home.html';
+                        }, 2000); // Redireciona após 2 segundos
+                    })
+                    .catch(error => {
+                        console.error('Erro ao verificar pagamento:', error);
+                    });
+            } else {
+                console.error('Nenhum session_id encontrado na URL');
+            }
+        });
+
+        $("button").click(() => {
+            window.location.href = "home.html";
+        });
+    </script>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const sessionId = urlParams.get('session_id');
-
-        
-
-        if (sessionId) {
-            fetch(`https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/verifyCheckoutSession?session_id=${sessionId}`)
-                .then(response => response.json())
-                .then(async data => {
-                    if (data.paid) {
-                        // Atualize o status do usuário para premium no Firestore
-                        await fetch('https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/updateUserStatus', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ userId: data.userId, premium: true })
-                        });
-
-                        alert('Você agora é um usuário premium!');
-                    } else {
-                        alert('O pagamento não foi concluído. Tente novamente.');
-                    }
-                })
-                .catch(error => console.error('Erro ao verificar a sessão de pagamento:', error));
-        }
-    });
-</script>
-
 </html>

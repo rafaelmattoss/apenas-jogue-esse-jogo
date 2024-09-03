@@ -99,46 +99,53 @@ function logOut() {
 
 // Integração com o Stripe para o botão "Torne-se Premium"
 
-$("#premium-button").click(() => {
-    const user = firebase.auth().currentUser;
-    if (!user) {
-        console.error('Usuário não autenticado');
-        alert('Você precisa estar autenticado para realizar essa ação.');
-        return;
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    // Inicialize o Stripe com sua chave pública de teste
+    const stripe = Stripe('pk_test_51PjN8Z086aDpYuyzGsV8dUNnqhOpmyhI3KShJ5vc3okBvMS3CsjQE0FIkYTTFm36GUh1BvEmXeXly1jccuvgGdWt00SHnD7tkA');
+    
 
-    const userId = user.uid;
 
-    fetch('https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/createCheckoutSession', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ userId })
-    })
-    .then(response => {
-        if (!response.ok) {
-            console.error('Resposta da rede não foi ok:', response);
-            throw new Error('Network response was not ok');
+    $("#premium-button").click(() => {
+        const user = firebase.auth().currentUser;
+        if (!user) {
+            console.error('Usuário não autenticado');
+            alert('Você precisa estar autenticado para realizar essa ação.');
+            return;
         }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Dados recebidos do backend:', data);
-        const stripe = Stripe('pk_live_51PjN8Z086aDpYuyzVT7w6smVTTlZa0jT219xzUNwxxOf52uHbYJhEUKetPwBrcu9Qh2JXrOtgaPNrT5Cc2MPctny00XElaXj4A');
-        return stripe.redirectToCheckout({ sessionId: data.sessionId });
-    })
-    .then(result => {
-        if (result.error) {
-            console.error('Erro ao redirecionar para o checkout:', result.error.message);
-            alert(result.error.message);
-        }
-    })
-    .catch(error => {
-        console.error('Erro ao criar a sessão de checkout:', error);
-        alert('Erro ao criar a sessão de checkout. Verifique o console para detalhes.');
+
+        const userId = user.uid;
+
+        fetch('https://us-central1-apenas-jogue-esse-jogo.cloudfunctions.net/createCheckoutSession', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userId })
+        })
+        .then(response => {
+            if (!response.ok) {
+                console.error('Resposta da rede não foi ok:', response);
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Dados recebidos do backend:', data);
+            return stripe.redirectToCheckout({ sessionId: data.sessionId });
+        })
+        .then(result => {
+            if (result.error) {
+                console.error('Erro ao redirecionar para o checkout:', result.error.message);
+                alert(result.error.message);
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao criar a sessão de checkout:', error);
+            alert('Erro ao criar a sessão de checkout. Verifique o console para detalhes.');
+        });
     });
 });
+
 
 
 

@@ -6,7 +6,6 @@
     <title>home</title>
     <link rel="stylesheet" href="home.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="app.js"></script>
     <script src="https://js.stripe.com/v3/"></script> <!-- Adicione o script do Stripe aqui -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
    
@@ -95,7 +94,10 @@
 
     </div>
 
-    
+    <script>
+    const STRIPE_PUBLISHABLE_KEY = "pk_test_51PjN8Z086aDpYuyzGsV8dUNnqhOpmyhI3KShJ5vc3okBvMS3CsjQE0FIkYTTFm36GUh1BvEmXeXly1jccuvgGdWt00SHnD7tkA";
+const stripe = Stripe(STRIPE_PUBLISHABLE_KEY)
+</script>
     <script src="home.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>

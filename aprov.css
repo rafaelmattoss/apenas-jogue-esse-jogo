@@ -1,28 +1,42 @@
 @charset "UTF-8";
-body{
+
+body {
     background-color: green;
-    height: 100%;
-    margin: 0%;
+    height: 100vh; /* Use vh para garantir que ocupa a altura total da tela */
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0%;
+    flex-direction: column; /* Adicionado para garantir que o conteúdo seja empilhado verticalmente */
 }
 
 #aprovv {
-   text-align: center;
-    margin-top: 40vh;
-   font-size: 120px;
-   color: white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    font-size: 120px;
+    color: white;
+    display: block;
+    text-align: center;
 }
 
-h1{
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-
+    text-align: center; /* Adicionado para centralizar o texto */
+    margin: 20px 0; /* Adicionado espaço ao redor do título */
 }
 
-#negado{background-color: red;}
+div > button {
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 10px 20px; /* Adicionado para um visual de botão melhor */
+    font-size: 16px;
+    cursor: pointer; /* Adicionado para mostrar que o botão é clicável */
+    border: none;
+    background-color: white;
+    color: green;
+    border-radius: 5px;
+}
+
+#negado {
+    background-color: red;
+}

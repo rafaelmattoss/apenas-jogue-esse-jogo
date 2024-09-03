@@ -1,6 +1,8 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
-const stripe = require("stripe")(functions.config().stripe.secret);
+const stripe = require('stripe')(functions.config().stripe.secret);
+
+
 const cors = require("cors")({ origin: true }); // Permite todas as origens
 
 admin.initializeApp();
@@ -26,7 +28,7 @@ exports.createCheckoutSession = functions.https.onRequest((req, res) => {
                     },
                 ],
                 mode: 'payment',
-                success_url: `${YOUR_DOMAIN}/aprov.html`,
+                success_url: `${YOUR_DOMAIN}/aprov.html?session_id={CHECKOUT_SESSION_ID}`,
                 cancel_url: `${YOUR_DOMAIN}/neg.html`,
                 metadata: {
                     userId: req.body.userId // Envia o userId como metadado
@@ -50,7 +52,11 @@ exports.verifyCheckoutSession = functions.https.onRequest(async (req, res) => {
         const session = await stripe.checkout.sessions.retrieve(sessionId);
 
         if (session.payment_status === 'paid') {
-            res.json({ paid: true, userId: session.metadata.userId });
+            // Atualize o status do usuário no Firestore
+            const userId = session.metadata.userId;
+            await db.collection('usuarios').doc(userId).update({ premium: true });
+
+            res.json({ paid: true, userId });
         } else {
             res.json({ paid: false });
         }
@@ -65,10 +71,13 @@ exports.updateUserStatus = functions.https.onRequest(async (req, res) => {
 
     try {
         await db.collection('usuarios').doc(userId).update({ premium });
-
-        res.status(200).send('Status do usuário atualizado com sucesso.');
+        res.status(200).send('Usuário atualizado com sucesso');
     } catch (error) {
-        console.error("Erro ao atualizar o status do usuário", error);
-        res.status(500).send('Erro ao atualizar o status do usuário.');
+        console.error("Erro ao atualizar status do usuário", error);
+        res.status(500).send("Erro ao atualizar status do usuário.");
     }
 });
+
+
+
+
