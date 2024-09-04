@@ -39,6 +39,19 @@ function login(email, senha) {
 
 }
 
+$("#revelar").click(function() {
+    const passwordField = $("#senha"); // Seleciona o campo de senha
+    
+    if (passwordField.attr('type') === 'password') {
+        passwordField.attr('type', 'text');
+        $(this).text('visibility_off'); // Muda o ícone para "Esconder senha"
+    } else {
+        passwordField.attr('type', 'password');
+        $(this).text('visibility'); // Muda o ícone para "Mostrar senha"
+    }
+});
+
+
 var botaoRecuperar = $("#recover");
 botaoRecuperar.click(recuperarSenha);
 
