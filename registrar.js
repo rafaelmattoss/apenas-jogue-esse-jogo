@@ -58,6 +58,9 @@ function validarRegistro() {
     registrarUsuario(usuario);
 }
 
+
+
+
 // Função para validar o formato de e-mail
 function isValidEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

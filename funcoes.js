@@ -148,3 +148,21 @@ $("#sair").click(() => {
 
 
 
+$("#revelar").click(function() {
+    const passwordField = $("#senhar"); // Seleciona o campo de senha
+    const confirmPasswordField = $("#confirmarSenhar"); // Seleciona o campo de confirmação de senha
+    
+    if (passwordField.attr('type') === 'password') {
+        passwordField.attr('type', 'text');
+        confirmPasswordField.attr('type', 'text');
+        $(this).text('visibility_off'); // Muda o ícone para "Esconder senha"
+    } else {
+        passwordField.attr('type', 'password');
+        confirmPasswordField.attr('type', 'password');
+        $(this).text('visibility'); // Muda o ícone para "Mostrar senha"
+    }
+});
+
+
+
+

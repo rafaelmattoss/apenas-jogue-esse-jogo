@@ -16,6 +16,9 @@ $('#entrar').click(function() {
     }
 });
 
+
+
+
 function login(email, senha) {
     animaçãoDecarregamento(); // Mostra a animação de carregamento
 

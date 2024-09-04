@@ -30,6 +30,13 @@ body {
     font-family: "Libre Franklin", sans-serif; 
      
 }
+
+#revelar{
+    margin: auto;
+    display: block;
+    text-align: center;
+   
+}
 form {
     
     margin: 50px auto;
