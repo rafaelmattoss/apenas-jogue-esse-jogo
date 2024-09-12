@@ -224,15 +224,22 @@
     background-color: #e0e0e0;
 }
 
-#premium-button{
-    padding: 10px;
+#premium-button {
+    padding: 15px 20px; /* Aumenta o preenchimento para um botão maior */
     margin: auto;
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: yellow;
-    border-radius: 20px;
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-size: 16px; /* Aumenta o tamanho da fonte para legibilidade */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #fff; /* Texto branco */
+    background-color: #4a90e2; /* Tom de azul suave */
+    border: 2px solid #357ABD; /* Borda em um azul mais escuro */
+    border-radius: 25px; /* Arredondamento mais pronunciado */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animação suave */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center; /* Centraliza o texto */
 }
-
 @keyframes flutuar{
     0%{transform: translateY(0);}
     50%{transform: translateY(-15px);}
