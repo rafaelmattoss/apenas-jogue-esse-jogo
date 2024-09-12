@@ -30,9 +30,7 @@ function verificarPremiumERedirecionar(pagina) {
             console.error("Erro ao verificar status premium: ", error);
             alert("Ocorreu um erro ao verificar seu status. Por favor, tente novamente.");
         });
-    } else {
-        alert("Por favor, faça login primeiro.");
-    }
+    } 
 }
 
 $("#classico").click(function() {
