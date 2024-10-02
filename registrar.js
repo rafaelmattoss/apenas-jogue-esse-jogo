@@ -5,6 +5,12 @@ $(document).ready(function() {
     $("#registrar").click(function() {
         validarRegistro();
     });
+
+    $("#volt").click(function() {
+        window.location.href = 'index.html';
+    });
+
+
 });
 
 // Função para validar o registro do usuário
@@ -120,10 +126,5 @@ function limparCampos() {
     $("#confirmarSenhar").val("");
 }
 
-function animaçãoDecarregamento() {
-    // Implemente a animação de carregamento aqui
-}
 
-function removeAnimaçãoDecarregamento() {
-    // Implemente a remoção da animação de carregamento aqui
-}
+
