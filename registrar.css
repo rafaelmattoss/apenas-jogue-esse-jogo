@@ -1,15 +1,35 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-    font-family: "Libre Franklin", sans-serif;  
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #ffffff;
     height: 100vh;
-    font-weight: 300;
-    background: #f8c452;
-    background: -webkit-linear-gradient(top, #ffb375, #e1ef24);
-    background: -o-linear-gradient(top, #b8ff75, #f53796);
-    background: -moz-linear-gradient(top, #ff9575, #ef4d24);
-    background: linear-gradient(top, #ff75d6, #ef24de);
+    margin: 0;
 }
+
+#container {
+    display: flex;             /* Ativa o flexbox */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;      
+    margin-top: -200px;
+}
+
+#logo{
+    max-width: 330px;  /* Define o tamanho máximo */
+    width: 100%;       /* A imagem vai ocupar toda a largura disponível */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin: 150px auto -20px auto ; 
+}
+
+#realizar {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Comfortaa', sans-serif;
+    display: block; /* Certifique-se de que o elemento é um bloco para centralizar */
+    margin-bottom: 20px; /* Adiciona a margem inferior */
+    text-align: center; /* Alinha o conteúdo ao centro, se for um texto */
+ }
 
 #erros{
     background-color: red;
@@ -31,64 +51,65 @@ body {
      
 }
 
-#revelar{
+#form-registro {
     margin: auto;
-    display: block;
-    text-align: center;
-   
-}
-form {
-    
-    margin: 50px auto;
     max-width: 350px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 100px; /* Adiciona espaço no final do formulário */
 }
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
 }
-label {
-    font-weight: bold;
-    
-}
+
 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 10px; /* Garante que o padding não aumente a largura */
-}
-button {
-    width: 100%; /* Ocupa a largura total do pai (form) */
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    width: 319px;
+    height: 36.93px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
-    
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #ED7B54;
+    padding-bottom: 5px;
+    font-family: 'Comfortaa', sans-serif; 
 }
 
-#volt{
-    width: 100%; /* Ocupa a largura total do pai (form) */
-    padding: 10px 20px;
-    background-color: #2ef7c5;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
+input::placeholder {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 15px; 
+    color: #ED7B54;
 }
 
-button:hover {
-    background-color: #0056b3;
+input:focus{
+    outline: none
 }
+
+ #registrar{
+    background-color: #ED7B54;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 100px;
+    width: 319px;
+    height: 36.93px;
+    top: 723px;
+    left: 60px;  
+    display: block;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Comfortaa', sans-serif; 
+}
+
+#volt {
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 50px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+a{
+    color: #ED7B54;
+}
+
+
 
