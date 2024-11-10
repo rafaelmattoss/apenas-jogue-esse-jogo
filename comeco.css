@@ -2,15 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Reset de estilos básicos */
+/* CSS atualizado */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #acd7f1, #f0fcff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #FFF5E1;
     height: 100vh;
     margin: 0;
 }
+#container {
+    display: flex;             /* Ativa o flexbox */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente, se necessário */
+    height: 100vh;             /* Para ocupar toda a altura da tela (opcional) */
+}
+
+#teste {
+    max-width: 330px;  /* Define o tamanho máximo */
+    width: 100%;       /* A imagem vai ocupar toda a largura disponível */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin: 218px auto 0; /* Caso você queira adicionar um espaço superior */
+}
+
+
+
+
 
 h2 {
     font-family: "Libre Franklin", sans-serif;  
