@@ -31,6 +31,11 @@ body {
     text-align: center; /* Alinha o conteúdo ao centro, se for um texto */
  }
 
+ #realizar > p {
+    
+    color: #ED7B54;
+ }
+
 #erros{
     background-color: red;
     color: white;
@@ -87,7 +92,7 @@ input:focus{
     color: #fff;
     cursor: pointer;
     font-size: 13px;
-    margin-top: 100px;
+    margin-top: 80px;
     width: 319px;
     height: 36.93px;
     top: 723px;
@@ -111,5 +116,15 @@ a{
     color: #ED7B54;
 }
 
+#olho{
+    display: flex;
+    align-items: center;
+}
+
+#revelar{
+    color:#ED7B54;
+    font-size: 22px;
+    margin-left: -20px;
+}
 
 
