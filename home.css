@@ -2,18 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 #corpo {
-    font-family: "Libre Franklin", sans-serif;
+    background-color: #FFF5E1;;
     margin: 0;
     padding: 0;
     width: 100vw;
-    background: #514eff; /* Padrão: Light Blue */
-    background: -webkit-linear-gradient(top, #70c9ec, #007bff, #3571e2); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #65f8d3, #007bff, #33dbf5); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #5bded8, #007bff, #2dd9f3); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #4964fd, #007bff, #3de2fc); /* Standard syntax */
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+    
 }
 
 #jogos {
@@ -27,15 +20,15 @@
     color: red;
 }
 #configuracoes{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 #classico, #date, #familia, #namoro, #amigo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     animation: flutuar 1.5s  linear infinite;
     border-radius: 10px;
     
@@ -175,10 +168,38 @@
 
 .jogo p {
     margin-top: 10px; /* Ajuste a margem conforme necessário */
-    font-family: "Libre Franklin", sans-serif;
+    font-family: "Comfortaa", sans-serif;
     font-size: 18px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 60px;
+}
+
+#container {
+    display: flex;             /* Ativa o flexbox */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;      
+    margin-top: -200px;
+}
+
+#logo{
+    max-width: 330px;  /* Define o tamanho máximo */
+    width: 100%;       /* A imagem vai ocupar toda a largura disponível */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin: 150px auto -80px auto ; 
+}
+
+#titulo{
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22.3px;
+    text-align: center;
+    text-decoration-skip-ink: none;
+    width: 289px;
+    height: 63px;
+    left: 74px;
+    margin: auto;
+    margin-bottom: 100px;
 }
 
 #opcoes {

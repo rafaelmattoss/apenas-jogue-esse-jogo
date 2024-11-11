@@ -75,11 +75,12 @@ input {
     border-bottom: 1px solid #ED7B54;
     padding-bottom: 5px;
     font-family: 'Comfortaa', sans-serif; 
+    font-size: 16px;
 }
 
 input::placeholder {
     font-family: 'Comfortaa', sans-serif;
-    font-size: 15px; 
+    font-size: 16px; 
     color: #ED7B54;
 }
 

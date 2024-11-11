@@ -78,13 +78,6 @@ form {
     flex-direction: column;
 }
 
-label {
-    margin-bottom: -2px;
-    font-weight: bold;
-    font-family: "Libre Franklin", sans-serif;  
-    font-weight: 600;
-    color: #ffffff;
-}
 
 .input-container {
     display: flex;
