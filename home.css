@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 #corpo {
     background-color: #FFF5E1;;
     margin: 0;
@@ -16,11 +17,14 @@
     justify-content: center;
 }
 
-#close{
-    color: red;
-}
-#configuracoes{
-    color: rgb(0, 0, 0);
+
+
+#configuracoes, #close{
+    color: white;
+    background-color:#ED7B54;
+    padding: 10px;
+    border-radius: 50%;
+
 }
 
 #classico, #date, #familia, #namoro, #amigo {
@@ -31,55 +35,20 @@
     height: 120px;
     animation: flutuar 1.5s  linear infinite;
     border-radius: 10px;
+    color: #fff;
+    
     
 }
 
-#classico{
-    background: #98FB98; /* Padrão: PaleGreen */
-    background: -webkit-linear-gradient(top, #98FB98, #00FA9A); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #98FB98, #00FA9A); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #98FB98, #00FA9A); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #98FB98, #00FA9A); /* Standard syntax */
-    margin-right: 20px;
+#classico, #date, #amigo{
+    background-color: #606060;
+    
 }
 
-#date{
-    background: #fcb4ff; /* Padrão: Bisque */
-    background: -webkit-linear-gradient(top, #e397fa, #f86ae5, #cf10f5); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #c996e7, #ff40bf, #f8adff); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #b105a8, #e73cfd, #c37bff); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #f83d75, #ff0095, #ff184a); /* Standard syntax */
-}
 
-#familia{
-    background: #e0c4a1; /* Padrão: Bisque */
-    background: -webkit-linear-gradient(top, #f5c07f, #FFDAB9, #FFDEAD); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #e7c396, #ffb370, #FFDEAD); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #af9576, #da975c, #dfaf68); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #ffce93, #fdc28e, #FFDEAD); /* Standard syntax */
-}
+#familia, #namoro{
+    background: #ED7B54;
 
-#namoro{
-    background: #ff0000; /* Padrão: Bisque */
-    background: -webkit-linear-gradient(top, #ffffff, #ffbef6, #f55110); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #fdcce0, #fd5d5d, #ff0000); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #f86666, #f8652a, #bb0000); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #ff0263, #ff1d1d, #ffb6c6); /* Standard syntax */
-}
-
-#amigo{
-
-    background: #00ff2a; /* Padrão: Bisque */
-    background: -webkit-linear-gradient(top, #026d16, #0cad42, #18bf37); /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(top, #2f7b2d, #62b746, #019c15); /* Opera 11.1-12 */
-    background: -moz-linear-gradient(top, #55d137, #369104, #007117); /* Firefox 3.6-15 */
-    background: linear-gradient(to bottom, #009b56, #46ac60, #1da532); /* Standard syntax */
-
-}
-
-.material-symbols-outlined {
-    font-size: 48px; 
-    /* Tamanho dos ícones */
 }
 
 #curios{
@@ -185,7 +154,7 @@
     max-width: 330px;  /* Define o tamanho máximo */
     width: 100%;       /* A imagem vai ocupar toda a largura disponível */
     height: auto;      /* Mantém a proporção da imagem */
-    margin: 150px auto -80px auto ; 
+    margin: 120px auto -80px auto ; 
 }
 
 #titulo{
@@ -205,6 +174,8 @@
 #opcoes {
     display: flex;
     justify-content: right;
+    
+    
 }
 
 #opcoes > span {
@@ -212,8 +183,17 @@
     margin-left: 20px;
     margin-right: 20px;
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px; 
 }
+
+#classico > span,
+#familia > span,
+#date > span,
+#namoro > span,
+#amigo > span {
+    font-size: 80px;
+}
+
 
 #menuconfig {
     margin-top: -70px;
@@ -221,6 +201,7 @@
     justify-content: right;
     gap: 65%;
     padding: 20px;
+    margin-right: 50px;
 }
 
 #menuconfig ul {
