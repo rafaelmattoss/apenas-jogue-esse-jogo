@@ -33,7 +33,7 @@ $(document).ready(function() {
         if ($cartas.length > 0) {
             var randomCarta = Math.floor(Math.random() * $cartas.length);
             var $cartaSelecionada = $cartas.eq(randomCarta);
-            $cartaSelecionada.fadeIn(1000); // Exibe uma carta aleatória
+            $cartaSelecionada.fadeIn(1800); // Exibe uma carta aleatória
 
             // Adiciona o texto da carta exibida ao array de exibidas
             exibidas.push($cartaSelecionada.text());
