@@ -79,11 +79,6 @@ body {
 }
 
 
-#conhecer {
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
 
 #fundopergunta {
     margin: auto;
@@ -92,19 +87,17 @@ body {
 }
 
 #fundopergunta img {
+    margin-left: -50px;
     width: 500px;
     height: 747px;
-    top: 0;
-    left: 0;
 }
 
 .cartaint {
     margin: -600px auto;
     width: 300px;
-    height: 500px;
+    height: 747px;
     background-color: rgba(255, 255, 255, 0); /* Fundo transparente */
     color: rgb(0, 0, 0); /* Cor do texto */
-    padding: 20px;
     border-radius: 20px;
     font-family: "Comfortaa", sans-serif;
     text-align: left;
