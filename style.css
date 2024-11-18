@@ -85,36 +85,33 @@ body {
     margin-bottom: 20px;
 }
 
-/* Estilo para o texto dentro das cartas */
-.cartaint {
-    height: 500px;
-    width: 280px;
+#fundopergunta {
     margin: auto;
-    margin-top: -10px;
-    margin-bottom: 100px;
-    background-color: white;
-    color: rgb(0, 0, 0); /* Cor do texto cinza escuro */
-    padding: 20px;
-    border-radius: 20px;
-    font-family: "Libre Franklin", sans-serif;  ;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #f67f00; /* Borda cinza */
-    font-size: 20px;
-    text-align: left;
-    line-height: 30px;
-
+    width: 500px;
+    height: 747px;
 }
 
+#fundopergunta img {
+    width: 500px;
+    height: 747px;
+    top: 0;
+    left: 0;
+}
 
-
-
-   
-
-
-
+.cartaint {
+    margin: -600px auto;
+    width: 300px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0); /* Fundo transparente */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    padding: 20px;
+    border-radius: 20px;
+    font-family: "Comfortaa", sans-serif;
+    text-align: left;
+    line-height: 30px;
+    font-size: 20px;
+    z-index:1 ; /* Coloca a carta acima da imagem */
+}
 
 
 /* Estilo para o título da página */
@@ -124,8 +121,7 @@ h1 {
 }
 
 /* Estilo para o conteúdo geral */
-#cartasint,
-#cartascon {
+#cartasint{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,17 +130,13 @@ h1 {
     
 }
 
-/* Adiciona sombra às divs dentro de #cartasint e #cartascon */
-#conhecer div,
-#intimidade div {
-    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.473); 
-}
+
+
 
 
 #dado {
-    margin-top: -20px;
-    width: 80px; 
-    height: 80px; 
+    width: 100px; 
+    height: 100px; 
     border-radius: 50%; 
     font-size: 1.5em; 
     font-weight: bold; 
@@ -152,15 +144,15 @@ h1 {
     justify-content: center; 
     align-items: center; 
     cursor: pointer; 
-    position: relative; 
-    overflow: hidden; 
-    margin:-50px auto;
+    margin: -215px auto;
+    border: none;
      
 }
 
 #dado img{
     width: 150px; /* Ajuste a largura conforme necessário */
-    height: auto
+    height: auto;
+    padding: 50px;
 }
 
 
