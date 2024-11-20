@@ -86,7 +86,7 @@ body {
     background-size: contain;
     width:250px ;
     height: 550px;
-    margin: auto ;
+    margin: -100px auto ;
     color: rgb(0, 0, 0); /* Cor do texto cinza escuro */
     border-radius: 20px;
     font-family: "Libre Franklin", sans-serif;  ;
