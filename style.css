@@ -7,7 +7,8 @@ body {
     padding: 0;
     width: 100vw; 
     font-family: "Comfortaa", sans-serif;
-    background-color: #FFF5E1;
+    background-image: url(imagens/papel\ de\ parede\ class.png);
+    background-size: contain;
     min-height: 100vh;
     
 }
@@ -18,7 +19,7 @@ body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 150px;
 }
 
 #fechar{
@@ -57,6 +58,7 @@ body {
         box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         z-index: 1000; /* Certifique-se de que o menu fica no topo */
         display: none;
+        margin-bottom: 100px;
 }
 
     
@@ -167,6 +169,7 @@ h1 {
         box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         z-index: 1000; /* Certifique-se de que o menu fica no topo */
         display: none;
+        margin-bottom: 100px;
 }
 
 #menuconfig li {
