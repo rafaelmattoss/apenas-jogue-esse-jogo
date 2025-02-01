@@ -200,6 +200,11 @@
     justify-content: right;
 }
 
+.jogo img {
+    pointer-events: none;
+}
+
+
 #opcoes > span {
     margin-top: 50px;
     margin-left: 20px;

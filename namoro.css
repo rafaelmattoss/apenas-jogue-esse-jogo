@@ -82,7 +82,8 @@ body {
     min-height: 100vh;
 }
 
-.cartarel{
+
+.cartarel {
     background-image: url(imagens/perguntas.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -101,6 +102,7 @@ body {
     line-height: 30px;
     padding: 50px;
     border-radius: 20px;
+
 }
 
 

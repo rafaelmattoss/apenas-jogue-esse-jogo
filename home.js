@@ -15,23 +15,7 @@ $("#close").click(()=>{
 });
 
 
-function verificarPremiumERedirecionar(pagina) {
-    const user = firebase.auth().currentUser;
 
-    if (user) {
-        const userId = user.uid;
-        firebase.firestore().collection('usuarios').doc(userId).get().then((userDoc) => {
-            if (userDoc.exists && userDoc.data().premium) {
-                window.location.href = pagina;
-            } else {
-                $("#torne").show();
-            }
-        }).catch((error) => {
-            console.error("Erro ao verificar status premium: ", error);
-            alert("Ocorreu um erro ao verificar seu status. Por favor, tente novamente.");
-        });
-    } 
-}
 
 $("#classico").click(function() {
     window.location.href = 'jogo.html'; // O modo clássico está acessível para todos os usuários
@@ -52,6 +36,7 @@ $("#date").click(function() {
 $("#namoro").click(function() {
     verificarPremiumERedirecionar('namoro.html');
 });
+
 
 
 $("#suaconta").click(() => {
@@ -143,6 +128,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+function verificarPremiumERedirecionar(pagina) {
+    const user = firebase.auth().currentUser;
+
+    if (user) {
+        const userId = user.uid;
+        firebase.firestore().collection('usuarios').doc(userId).get().then((userDoc) => {
+            if (userDoc.exists && userDoc.data().premium) {
+                window.location.href = pagina;
+            } else {
+                $("#torne").show();
+            }
+        }).catch((error) => {
+            console.error("Erro ao verificar status premium: ", error);
+            alert("Ocorreu um erro ao verificar seu status. Por favor, tente novamente.");
+        });
+    } 
+}
 
 
 
