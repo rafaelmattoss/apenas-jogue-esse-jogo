@@ -14,14 +14,14 @@ body {
 }
 
 #config{
-    color: white;
+    color: rgb(0, 0, 0);
     display: block;
     text-align: center;
     margin-top: 20px;
 }
 
 #fechar{
-    color: white;
+    color: rgb(0, 0, 0);
     display: block;
     text-align: center;
     margin-top: 20px;
@@ -89,7 +89,7 @@ body {
     background-size: contain;
     width:250px ;
     height: 550px;
-    margin: -100px auto ;
+    margin: 50px auto ;
     color: rgb(0, 0, 0); /* Cor do texto cinza escuro */
     border-radius: 20px;
     font-family: "Libre Franklin", sans-serif;  ;
@@ -101,7 +101,8 @@ body {
     text-align: left;
     line-height: 30px;
     padding: 50px;
-    border-radius: 20px;
+    
+
 
 }
 
@@ -119,7 +120,7 @@ body {
     justify-content: center; 
     align-items: center; 
     cursor: pointer; 
-    margin: auto;
+    margin: -50px auto;
     border: none;
     padding: 100px;
 
