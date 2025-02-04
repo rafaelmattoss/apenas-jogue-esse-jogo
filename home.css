@@ -148,6 +148,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
+    font-family: "Comfortaa", sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
     text-align: center;
@@ -214,15 +215,15 @@
 }
 
 #premium-button {
-    padding: 15px 20px;
+    padding: 15px 08px;
     margin: auto;
     display: block;
-    font-family: 'Arial', Helvetica, sans-serif;
+    font-family: "Comfortaa", sans-serif;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #4a90e2;
-    border: 2px solid #357ABD;
+    background-color: #ff9c50;
+    border: none;
     border-radius: 25px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;

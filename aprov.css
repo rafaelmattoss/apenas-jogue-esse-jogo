@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     background-color: green;
@@ -39,4 +40,29 @@ div > button {
 
 #negado {
     background-color: red;
+}
+
+#negadoo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Faz a div ocupar toda a altura da tela */
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: "Comfortaa", sans-serif;;
+    margin-top: 15px;
+}
+
+a:hover {
+    background-color: #cc0000; /* Efeito ao passar o mouse */
 }
