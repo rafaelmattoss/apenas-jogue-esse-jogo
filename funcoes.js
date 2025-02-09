@@ -9,6 +9,7 @@ $(document).ready(function() {
     // Manipulação do clique no dado
     $('#dado').click(function() {
         // Adiciona a classe de animação ao dado
+        $("#inst").hide()
         $(this).addClass('spin-animation');
 
         // Remove a classe de animação após 1 segundo (1000 milissegundos)
