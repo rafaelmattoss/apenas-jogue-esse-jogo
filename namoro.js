@@ -9,6 +9,8 @@ $(document).ready(function() {
 
     // Manipulação do clique no botão "Rode o Dado"
     $('#dado').click(function() {
+
+        $("#inst").hide()
         
 
         $(this).addClass('spin-animation');

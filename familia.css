@@ -1,7 +1,8 @@
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+/* Estilo para o corpo da página */
 body {
     margin: 0;
     padding: 0;
@@ -13,18 +14,21 @@ body {
     
 }
 
+
 #config{
     color: rgb(0, 0, 0);
     display: block;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 150px;
 }
 
 #fechar{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
     display: block;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 150px;
 }
 
 #fechar:hover{
@@ -55,6 +59,7 @@ body {
         box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         z-index: 1000; /* Certifique-se de que o menu fica no topo */
         display: none;
+        margin-bottom: 100px;
 }
 
     
@@ -76,10 +81,16 @@ body {
 }
 
 
-.container {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+#inst{
+    background-color: rgb(255, 175, 113);
+    width: 300px;
+    height: 150px;
+    margin: -80px auto;
+    padding-top:20px ;
+    border-radius: 20px;
+    animation: pulse 1.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 80px;
+    
 }
 
 
@@ -89,10 +100,10 @@ body {
     background-size: contain;
     width:250px ;
     height: 550px;
-    margin: 50px auto ;
+    margin: -100px auto ;
     color: rgb(0, 0, 0); /* Cor do texto cinza escuro */
     border-radius: 20px;
-    font-family: "Libre Franklin", sans-serif;  ;
+    font-family: "Comfortaa", sans-serif;
     text-align: center;
     display: flex;
     align-items: center;
@@ -101,10 +112,18 @@ body {
     text-align: left;
     line-height: 30px;
     padding: 50px;
-    
-
+    border-radius: 20px;
 
 }
+
+
+/* Estilo para o título da página */
+h1 {
+    text-align: center;
+    color: #333; /* Cor do título cinza escuro */
+}
+
+
 
 
 #dado {
@@ -129,25 +148,10 @@ body {
     
 }
 
-#inst{
-    background-color: rgb(255, 175, 113);
-    width: 300px;
-    height: 150px;
-    margin: auto;
-    padding-top:20px ;
-    border-radius: 20px;
-    animation: pulse 1.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
-    
-    
-}
-
-@keyframes pulse {
-    0% { transform: scale(0.9); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(0.9); }
-}
 
 
+
+  
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -160,7 +164,7 @@ body {
 
 @keyframes pulse {
     0% { transform: scale(0.9); }
-    50% { transform: scale(1.1); }
+    50% { transform: scale(1); }
     100% { transform: scale(0.9); }
 }
 
@@ -197,3 +201,20 @@ body {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
