@@ -112,11 +112,7 @@ function registrarUsuario(usuario) {
                     });
             }
         })
-        .catch((error) => {
-            console.error("Erro ao registrar usuário:", error);
-            alert("Ocorreu um erro ao criar a conta. Por favor, tente novamente.");
-            removeAnimaçãoDecarregamento(); // Remove a animação de carregamento
-        });
+        
 }
 
 function limparCampos() {
