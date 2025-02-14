@@ -174,14 +174,14 @@ input::placeholder{
 /* Botão de Esqueci Minha Senha */
 
 
-#revelar{
-    display: block;
-    margin-top: -45px; /* Margem superior de -45px */
-    margin-bottom: 50px; /* Margem inferior de 50px */
-    margin-left: auto;
-    margin-right: auto;
-   
+#revelarr {
+    margin-left: 290px; 
+    margin-top: -50px;
+    color: #ED7B54;
+    font-size: 24px; /* Tamanho adequado para o ícone */
+    cursor: pointer; /* Indicando que o ícone é clicável */
 }
+
   
 .c-loader {
     animation: is-rotating 1s infinite;

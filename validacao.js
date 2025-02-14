@@ -39,18 +39,18 @@ function login(email, senha) {
 
 }
 
-$("#revelar").click(function() {
-    const passwordField = $("#senha"); // Seleciona o campo de senha
-    
-    if (passwordField.attr('type') === 'password') {
-        passwordField.attr('type', 'text');
-        $(this).text('visibility_off'); // Muda o ícone para "Esconder senha"
+$("#revelarr").click(function() {
+    const senha = document.getElementById("senha");
+    const revelar = document.getElementById("revelar");
+
+    if (senha.type === 'password') {
+        senha.type = 'text'; // Mostra a senha
+        revelar.textContent = 'visibility_off'; // Muda o ícone para "esconder"
     } else {
-        passwordField.attr('type', 'password');
-        $(this).text('visibility'); // Muda o ícone para "Mostrar senha"
+        senha.type = 'password'; // Esconde a senha novamente
+        revelar.textContent = 'visibility'; // Muda o ícone para "mostrar"
     }
 });
-
 
 var botaoRecuperar = $("#recover");
 botaoRecuperar.click(recuperarSenha);

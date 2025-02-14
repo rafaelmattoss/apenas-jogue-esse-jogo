@@ -1,5 +1,6 @@
 $("#menuconfig").hide();
 $("#close").hide();
+$(".c-loader").hide();
 
 $("#configuracoes").click(()=>{
     $("#configuracoes").hide();
@@ -89,11 +90,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     $("#premium-button").click(() => {
+        $("#torne").hide()
+
+        $(".c-loader").show()
+
+
         const user = firebase.auth().currentUser;
         if (!user) {
             console.error('Usuário não autenticado');
             alert('Você precisa estar autenticado para realizar essa ação.');
             return;
+
         }
 
         const userId = user.uid;
@@ -115,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             console.log('Dados recebidos do backend:', data);
             return stripe.redirectToCheckout({ sessionId: data.sessionId });
+            $(".c-loader").hide()
         })
         .then(result => {
             if (result.error) {
@@ -131,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function verificarPremiumERedirecionar(pagina) {
     const user = firebase.auth().currentUser;
+
 
     if (user) {
         const userId = user.uid;
