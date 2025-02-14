@@ -118,6 +118,9 @@ body {
     margin-bottom: 20px;
     border-radius: 30px;
     font-family: "Comfortaa", sans-serif; 
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: bold;
 }
 
 
