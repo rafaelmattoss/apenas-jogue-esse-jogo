@@ -96,6 +96,7 @@ input[type="password"] {
     border: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.471);
     padding-left: 18px;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 input::placeholder{
@@ -104,6 +105,15 @@ input::placeholder{
 }
 
 
+#senha {
+    width: 319px;
+    height: 36.93px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.471);
+    padding-left: 18px;
+    font-family: 'Comfortaa', sans-serif;
+}
 
 
 /* Botão de Entrar */
@@ -174,7 +184,7 @@ input::placeholder{
 /* Botão de Esqueci Minha Senha */
 
 
-#revelarr {
+#revelar {
     margin-left: 290px; 
     margin-top: -50px;
     color: #ED7B54;

@@ -52,6 +52,24 @@ $("#revelarr").click(function() {
     }
 });
 
+$("#revelar").click(function() {
+    let senha = $("#senha");
+    let tipo = senha.attr("type") === "password" ? "text" : "password";
+
+    // Criando um novo input para evitar perda de estilização
+    let novoInput = $("<input>")
+        .attr("type", tipo)
+        .attr("id", "senha")
+        .attr("name", "senha")
+        .attr("placeholder", "Senha")
+        .attr("required", true)
+        .val(senha.val()) // Mantém o valor da senha atual
+        .addClass(senha.attr("class")); // Mantém a estilização original
+
+    senha.replaceWith(novoInput); // Substitui o input antigo pelo novo
+    $(this).text(tipo === "password" ? "visibility" : "visibility_off");
+});
+
 var botaoRecuperar = $("#recover");
 botaoRecuperar.click(recuperarSenha);
 
